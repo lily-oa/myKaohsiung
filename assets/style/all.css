@@ -14241,7 +14241,11 @@ body {
 /*-- layout --*/
 /*-- pages --*/
 .bg {
-  background-image: url("../");
+  background-image: url("https://hexschool.github.io/JavaScript_HomeWork/preview/page-1-acknowledgement.png?1632901508706");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 380px;
 }
 
 /*# sourceMappingURL=all.css.map */
