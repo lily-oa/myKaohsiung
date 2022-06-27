@@ -22,3 +22,15 @@
     color: #fff;
   }
 }
+
+.select-group{
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid #fff;
+  border-radius: 3px;
+  width: 45%;
+  height: 13%;
+  font-size: $h5-font-size;  //18px
+  line-height: 21px;
+  padding: 0 10px;
+  z-index: 1080;
+}
