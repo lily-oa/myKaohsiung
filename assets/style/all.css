@@ -14241,7 +14241,7 @@ body {
 /*-- layout --*/
 /*-- pages --*/
 .bg {
-  background-image: url("./assets/images/bg.png");
+  background: url("../images/bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
