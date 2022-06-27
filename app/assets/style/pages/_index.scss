@@ -1,5 +1,5 @@
 .bg{
-  background-image: url('./assets/images/bg.png');
+  background: url('../images/bg.png');  //不能用 bgi
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
