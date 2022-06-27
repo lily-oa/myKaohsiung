@@ -14241,11 +14241,35 @@ body {
 /*-- layout --*/
 /*-- pages --*/
 .bg {
-  background: url("../images/bg.png");
+  background: url("../images/Hero.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin-bottom: 121px;
+}
+
+.logo {
+  margin: 89px 0 96px 0;
+}
+
+.logo a {
+  display: block;
+  color: #fff;
 }
 
 /*# sourceMappingURL=all.css.map */
