@@ -1,7 +1,24 @@
 .bg{
-  background: url('../images/bg.png');  //不能用 bgi
+  background: url('../images/Hero.png');  //不能用 bgi
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 380px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  margin-bottom: 121px;
+}
+
+.logo{
+  margin: 89px 0 96px 0;
+
+  a{
+    display: block;
+    color: #fff;
+  }
 }
