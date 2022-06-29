@@ -14278,10 +14278,20 @@ body {
   border-radius: 3px;
   width: 45%;
   height: 13%;
-  font-size: 1.125rem;
   line-height: 21px;
   padding: 0 10px;
   z-index: 1080;
+}
+
+.tabs-group {
+  position: absolute;
+  bottom: -140px;
+  width: 78%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 20px 0 18px 26px;
 }
 
 /*# sourceMappingURL=all.css.map */
