@@ -14752,6 +14752,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 0;
   }
   .hr a {
     display: -webkit-box;
