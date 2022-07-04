@@ -14618,12 +14618,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
   margin-bottom: 121px;
 }
 
+@media (min-width: 768px) {
+  .bg {
+    position: relative;
+  }
+}
+
 .logo {
-  margin: 30px 0 40px 0;
+  margin: 250px 0 40px 0;
 }
 
 @media (min-width: 768px) {
@@ -14646,6 +14651,7 @@ body {
   line-height: 21px;
   padding: 0 10px;
   z-index: 1080;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
@@ -14655,7 +14661,6 @@ body {
 }
 
 .tabs-group {
-  position: absolute;
   bottom: -280px;
   width: 78%;
   background-color: #fff;
@@ -14667,6 +14672,7 @@ body {
 
 @media (min-width: 768px) {
   .tabs-group {
+    position: absolute;
     bottom: -100px;
   }
 }
