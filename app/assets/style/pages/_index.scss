@@ -44,3 +44,10 @@
   border-radius: 5px;
   padding: 20px 0 18px 26px;
 }
+
+.tabs-list{
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 12px;   //网格行与列之间的间隙
+  padding: 0 25px;
+}
