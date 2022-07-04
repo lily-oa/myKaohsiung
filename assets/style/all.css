@@ -14711,4 +14711,51 @@ body {
   color: #fff;
 }
 
+.hr {
+  width: 88%;
+  margin: 0 auto;
+  border-bottom: 1px dashed #559ac8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hr a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  color: #559ac8;
+  font-size: 1.5rem;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .hr {
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hr a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    color: #559ac8;
+    font-size: 1.5rem;
+    background-color: #fff;
+  }
+}
+
 /*# sourceMappingURL=all.css.map */
