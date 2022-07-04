@@ -93,3 +93,34 @@
     color: #fff;
   }
 }
+
+.hr{
+  width: 88%;
+  margin: 0 auto;
+  border-bottom: 1px dashed $primary;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  
+  a{
+    display: flex;
+    position: absolute;
+    color: $primary;
+    font-size: $h3-font-size;
+    background-color: #fff;
+  }
+
+  @include media-breakpoint-up(md){
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    a{
+      display: flex;
+      position: absolute;
+      color: $primary;
+      font-size: $h3-font-size;
+      background-color: #fff;
+    }
+  }
+}
