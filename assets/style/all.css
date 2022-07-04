@@ -14294,4 +14294,14 @@ body {
   padding: 20px 0 18px 26px;
 }
 
+.tabs-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 12px;
+  padding: 0 25px;
+}
+
 /*# sourceMappingURL=all.css.map */
