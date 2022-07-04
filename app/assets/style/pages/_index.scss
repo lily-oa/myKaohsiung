@@ -123,13 +123,14 @@
       display: flex;
       position: absolute;
       color: $primary;
-      font-size: $h3-font-size;
+      font-size: $h3-font-size;  //24px
       background-color: #fff;
     }
   }
 }
 
 //-----------------卡片區-----------------
+
 .container{
   padding: 65px 39px 40px 40px;
 }
@@ -157,6 +158,9 @@
   @include media-breakpoint-up(md){
     width: 30.3%;  
   }
+  @include media-breakpoint-up(lg) {
+    width: 45.3%;
+  }
 }
 
 .card-header{
@@ -167,4 +171,50 @@
   color: #fff;
   display: flex;
   flex-direction: column;
+}
+
+.card-title{
+  padding: 0 22px 14px 22px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 0.5rem;
+  h4{
+    font-size: $h3-font-size; //24px
+  }
+  p{
+    white-space: nowrap;
+  }
+}
+
+.card-body{
+  padding: 15px 24px 19px 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  li{
+    display: flex;
+    align-items: center;
+    
+    &:not(last-child){
+      margin-bottom: 14px;
+    }
+    &:nth-child(1) i{
+      color: $secondary;
+    }
+    &:nth-child(2) i{
+      color: $third;
+    }
+
+    i{
+      margin-right: 10px;
+      font-size: $h6-font-size;
+      text-align: center;
+      width: 18px;
+      height: 18px;
+    }
+  }
 }
