@@ -50,4 +50,32 @@
   flex-wrap: nowrap;
   gap: 12px;   //网格行与列之间的间隙
   padding: 0 25px;
+
+
+  li{
+    white-space: nowrap;
+
+    &:nth-child(1n) a{
+      background-color: $secondary;
+    }
+
+    &:nth-child(2n) a{
+      background-color: $third;
+    }
+
+    &:nth-child(3n) a{
+      background-color: $four;
+    }
+
+    &:nth-child(4n) a{
+      background-color: $primary;
+    }
+  }
+
+  a{
+    display: block;
+    padding: 12px 34px;
+    font-size: $h4-font-size;  //20px
+    color: #fff;
+  }
 }
