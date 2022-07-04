@@ -14304,4 +14304,31 @@ body {
   padding: 0 25px;
 }
 
+.tabs-list li {
+  white-space: nowrap;
+}
+
+.tabs-list li:nth-child(1n) a {
+  background-color: #8a82cc;
+}
+
+.tabs-list li:nth-child(2n) a {
+  background-color: #ffa782;
+}
+
+.tabs-list li:nth-child(3n) a {
+  background-color: #f5d105;
+}
+
+.tabs-list li:nth-child(4n) a {
+  background-color: #559ac8;
+}
+
+.tabs-list a {
+  display: block;
+  padding: 12px 34px;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
 /*# sourceMappingURL=all.css.map */
