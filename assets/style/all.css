@@ -14661,7 +14661,6 @@ body {
 }
 
 .tabs-group {
-  bottom: -280px;
   width: 78%;
   background-color: #fff;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -14694,19 +14693,19 @@ body {
   white-space: nowrap;
 }
 
-.tabs-list li:nth-child(1n) a {
+.tabs-list li:nth-child(1) a {
   background-color: #8a82cc;
 }
 
-.tabs-list li:nth-child(2n) a {
+.tabs-list li:nth-child(2) a {
   background-color: #ffa782;
 }
 
-.tabs-list li:nth-child(3n) a {
+.tabs-list li:nth-child(3) a {
   background-color: #f5d105;
 }
 
-.tabs-list li:nth-child(4n) a {
+.tabs-list li:nth-child(4) a {
   background-color: #559ac8;
 }
 
@@ -14731,6 +14730,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 100px;
 }
 
 .hr a {
