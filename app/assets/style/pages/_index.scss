@@ -15,7 +15,11 @@
 }
 
 .logo{
-  margin: 89px 0 96px 0;
+  margin: 30px 0 40px 0;
+
+  @include media-breakpoint-up(md) {
+    margin: 89px 0 96px 0;
+  }
 
   a{
     display: block;
@@ -32,28 +36,38 @@
   line-height: 21px;
   padding: 0 10px;
   z-index: 1080;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 79px;
+  }
 }
 
 .tabs-group{
   position: absolute;
-  bottom: -140px;      //文字往下
+  bottom: -280px;  //區塊往下
+
+  @include media-breakpoint-up(md) {
+    bottom: -100px;   //區塊往下
+  }
 
   width: 78%;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  padding: 20px 0 18px 26px;
+  padding: 20px 0 18px 80px;
+
+  @include media-breakpoint-up(md) {
+    padding: 20px 0 18px 26px;
+  }
 }
 
 .tabs-list{
   display: inline-flex;
-  flex-wrap: nowrap;
   gap: 12px;   //网格行与列之间的间隙
-  padding: 0 25px;
 
 
   li{
-    white-space: nowrap;
+    white-space: nowrap; //文字以橫向顯示
 
     &:nth-child(1n) a{
       background-color: $secondary;
