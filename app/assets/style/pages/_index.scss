@@ -193,6 +193,7 @@
 .card-body{
   padding: 15px 24px 19px 24px;
   flex-grow: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,10 +214,36 @@
 
     i{
       margin-right: 10px;
-      font-size: $h6-font-size;
+      font-size: $h6-font-size;  //18px
       text-align: center;
       width: 18px;
       height: 18px;
     }
+  }
+}
+
+.card-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+
+  div{
+    display: flex;
+    align-items: center;
+  }
+
+  & div:nth-child(1){
+    color: $primary;
+  }
+  & div:nth-child(2){
+    color: $four;
+  }
+}
+
+.card-footer-item {
+  &[data-display*="d-none"]{
+    display: none;
   }
 }
