@@ -14904,7 +14904,7 @@ body {
   height: 18px;
 }
 
-.card-footer {
+.card-footer-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14919,7 +14919,7 @@ body {
       flex-wrap: wrap;
 }
 
-.card-footer div {
+.card-footer-list div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14928,11 +14928,12 @@ body {
           align-items: center;
 }
 
-.card-footer div:nth-child(1) {
+.card-footer-list div:nth-child(1) {
   color: #559ac8;
+  margin-bottom: 5px;
 }
 
-.card-footer div:nth-child(2) {
+.card-footer-list div:nth-child(2) {
   color: #f5d105;
 }
 
