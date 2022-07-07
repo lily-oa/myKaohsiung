@@ -265,6 +265,13 @@
   padding: auto 5px;
 
   &:disabled{
+    pointer-events: none;  //滑鼠穿越該元素，點擊到下方的元素
+  }
+
+  &[data-type="page"]{
+    font-size: $h7-font-size;  //14px
+    color: rgba(74, 74, 74, 0.50);
     pointer-events: none;
   }
 }
+
