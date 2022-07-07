@@ -158,10 +158,10 @@
   display: flex;
   flex-direction: column;
   @include media-breakpoint-up(md){
-    width: 40%;  
+    width: 45.3%;  
   }
   @include media-breakpoint-up(lg) {
-    width: 45.3%;
+    width: 30.3%;
   }
 }
 
@@ -249,3 +249,22 @@
   }
 }
 
+//----------------------------分頁設定----------------
+//若不是最後一個子節點都需設定邊距向右 8px
+.page-item {
+  &:not(:last-child){
+    margin-right: 8px;
+  }
+}
+
+.page-link {
+  display: block;
+  font-size: $h7-font-size;  //14px
+  color: #4a4a4a;
+  line-height: 17px;
+  padding: auto 5px;
+
+  &:disabled{
+    pointer-events: none;
+  }
+}
