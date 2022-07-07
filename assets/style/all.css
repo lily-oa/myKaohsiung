@@ -14808,13 +14808,13 @@ body {
 
 @media (min-width: 768px) {
   .card {
-    width: 30.3%;
+    width: 45.3%;
   }
 }
 
 @media (min-width: 992px) {
   .card {
-    width: 45.3%;
+    width: 30.3%;
   }
 }
 
@@ -14939,6 +14939,22 @@ body {
 
 .card-footer-item[data-display*="d-none"] {
   display: none;
+}
+
+.page-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.page-link {
+  display: block;
+  font-size: 0.875rem;
+  color: #4a4a4a;
+  line-height: 17px;
+  padding: auto 5px;
+}
+
+.page-link:disabled {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=all.css.map */
