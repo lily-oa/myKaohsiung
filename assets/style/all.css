@@ -14957,4 +14957,10 @@ body {
   pointer-events: none;
 }
 
+.page-link[data-type="page"] {
+  font-size: 0.875rem;
+  color: rgba(74, 74, 74, 0.5);
+  pointer-events: none;
+}
+
 /*# sourceMappingURL=all.css.map */
