@@ -289,6 +289,20 @@
   padding: 24px 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: $h7-font-size;  //14px
+  
+  p{
+    color: #ffd366;
+  }
+
+  & p:first-child{
+    margin-bottom: 15px;
+  }
+  a{
+    color: #fff;
+  }
 }
 
 
