@@ -273,5 +273,22 @@
     color: rgba(74, 74, 74, 0.50);
     pointer-events: none;
   }
+
+  &.active{
+    &[data-type="page"]{
+      font-size: $h7-font-size;  //14px
+      color: #4a4a4a;
+      pointer-events: auto; //被另外一個div遮住，就無法進行點擊或 hover 的動作
+    }
+  }
 }
+
+//------------頁尾---------------------------
+.footer{
+  background-color: $primary;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+
 
