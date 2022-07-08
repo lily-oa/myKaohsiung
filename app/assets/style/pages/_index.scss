@@ -263,6 +263,7 @@
   color: #4a4a4a;
   line-height: 17px;
   padding: auto 5px;
+  border: none;   //無邊框
 
   &:disabled{
     pointer-events: none;  //滑鼠穿越該元素，點擊到下方的元素
