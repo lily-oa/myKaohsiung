@@ -14937,15 +14937,6 @@ body {
   color: #f5d105;
 }
 
-@media (min-width: 768px) {
-  .card-footer-list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
-
 .card-footer-item[data-display*="d-none"] {
   display: none;
 }
