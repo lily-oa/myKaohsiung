@@ -241,6 +241,10 @@
   & div:nth-child(2){
     color: $four;
   }
+
+  @include media-breakpoint-up(md){
+    flex-direction: column;
+  }
 }
 
 .card-footer-item {
