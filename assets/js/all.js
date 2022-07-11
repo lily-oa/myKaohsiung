@@ -11,4 +11,25 @@ var subtitle = document.querySelector('.subtitle'); //卡片標題
 var cardList = document.querySelector('.card-list'); //卡片
 
 var pageList = document.querySelector('.pagination-list'); // 分頁
+
+var data = [];
+var page = {}; // 渲染 select filter
+
+function renderData(showData) {
+  // 渲染有存在的行政區到選單欄位
+  var selectGroup = showData.map(function (item) {
+    return item.Zone;
+  });
+  var newSelect = selectGroup.filter(function (item, index) {
+    return selectGroup.indexOf(item) == index;
+  });
+  var selectStr = "<option value=\"\u9AD8\u96C4\u5168\u5340\" selected class=\"fs-7\">-- \u9AD8\u96C4\u5168\u5340 --</option>";
+  newSelect.forEach(function (item) {
+    var list = "<option value=\"".concat(item, "\">").concat(item, "</option>");
+    selectStr += list;
+  });
+  select.innerHTML = selectStr;
+  subtitle.textContent = '高雄全區';
+  pagination(showData, 1);
+} // 渲染所有清單資料到畫面上
 //# sourceMappingURL=all.js.map
