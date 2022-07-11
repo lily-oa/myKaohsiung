@@ -244,6 +244,7 @@
 
   @include media-breakpoint-up(md){
     flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
