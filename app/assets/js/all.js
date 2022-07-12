@@ -26,3 +26,19 @@ function renderData(showData) {
 }
 
 // 渲染所有清單資料到畫面上
+
+const arr = [1, 5, 10]; 
+const newArr = arr.map(function(item){
+  return item * item;
+});
+
+console.log(newArr);
+console.log(arr);
+
+const myData = [1, 8, 13, 20];
+const newData = myData.map(function(item){
+  return item > 10; 
+});
+
+console.log(myData);
+console.log(newData);
