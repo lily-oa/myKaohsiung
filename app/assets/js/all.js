@@ -28,8 +28,10 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-const arr = [1, 5, 10];
-const newArr = arr.filter(function(item){
+// JS array filter、 find篩選
+const arr = [1, 2, 3, 4, 5, 10, 20, 30, 40];
+const newArr = arr.find(function(item){
+  console.log(item);   //看陣列跑了幾次
   return item >= 5; 
 });
 
