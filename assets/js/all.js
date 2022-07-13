@@ -36,22 +36,8 @@ function renderData(showData) {
 
 
 var arr = [1, 5, 10];
-var total = 0;
-var newArr = arr.map(function (item) {
-  return item * item;
-});
-arr.forEach(function (item) {
-  total += item;
+var newArr = arr.filter(function (item) {
+  return item >= 5;
 });
 console.log(newArr);
-console.log(arr);
-console.log(total);
-var myData = [1, 8, 13, 20];
-var newData = myData.map(function (item) {
-  var obj = {};
-  obj.checkNum = item > 10;
-  return obj;
-});
-console.log(myData);
-console.log(newData);
 //# sourceMappingURL=all.js.map
