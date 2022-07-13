@@ -28,26 +28,9 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-const arr = [1, 5, 10]; 
-let total = 0; 
-const newArr = arr.map(function(item){
-  return item * item;
-});
-
-arr.forEach(function(item){
-  total += item;
+const arr = [1, 5, 10];
+const newArr = arr.filter(function(item){
+  return item >= 5; 
 });
 
 console.log(newArr);
-console.log(arr);
-console.log(total);
-
-const myData = [1, 8, 13, 20];
-const newData = myData.map(function(item){
-  let obj = {}; 
-  obj.checkNum = item > 10;
-  return obj; 
-});
-
-console.log(myData);
-console.log(newData);
