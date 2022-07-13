@@ -34,3 +34,24 @@ const newArr = arr.filter(function(item){
 });
 
 console.log(newArr);
+
+//分數
+const scoreData = [
+  {
+    name: '小明',
+    score: 88
+  },
+  {
+    name: '小應',
+    score: 62
+  },
+  {
+    name: '小花',
+    score: 53
+  }
+]
+const filterScore = filter(function(item){
+  return item.score >= 60;
+});
+
+console.log(filterScore);
