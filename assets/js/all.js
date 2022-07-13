@@ -32,17 +32,25 @@ function renderData(showData) {
   subtitle.textContent = '高雄全區';
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
+//-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 
 
 var arr = [1, 5, 10];
+var total = 0;
 var newArr = arr.map(function (item) {
   return item * item;
 });
+arr.forEach(function (item) {
+  total += item;
+});
 console.log(newArr);
 console.log(arr);
+console.log(total);
 var myData = [1, 8, 13, 20];
 var newData = myData.map(function (item) {
-  return item > 10;
+  var obj = {};
+  obj.checkNum = item > 10;
+  return obj;
 });
 console.log(myData);
 console.log(newData);
