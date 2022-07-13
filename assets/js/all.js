@@ -39,5 +39,20 @@ var arr = [1, 5, 10];
 var newArr = arr.filter(function (item) {
   return item >= 5;
 });
-console.log(newArr);
+console.log(newArr); //分數
+
+var scoreData = [{
+  name: '小明',
+  score: 88
+}, {
+  name: '小應',
+  score: 62
+}, {
+  name: '小花',
+  score: 53
+}];
+var filterScore = filter(function (item) {
+  return item.score >= 60;
+});
+console.log(filterScore);
 //# sourceMappingURL=all.js.map
