@@ -33,10 +33,13 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
+// JS array filter、 find篩選
 
 
-var arr = [1, 5, 10];
-var newArr = arr.filter(function (item) {
+var arr = [1, 2, 3, 4, 5, 10, 20, 30, 40];
+var newArr = arr.find(function (item) {
+  console.log(item); //看陣列跑了幾次
+
   return item >= 5;
 });
 console.log(newArr); //分數
@@ -51,7 +54,7 @@ var scoreData = [{
   name: '小花',
   score: 53
 }];
-var filterScore = filter(function (item) {
+var filterScore = scoreData.filter(function (item) {
   return item.score >= 60;
 });
 console.log(filterScore);
