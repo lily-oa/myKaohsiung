@@ -50,7 +50,7 @@ const scoreData = [
     score: 53
   }
 ]
-const filterScore = filter(function(item){
+const filterScore = scoreData.filter(function(item){
   return item.score >= 60;
 });
 
