@@ -37,8 +37,25 @@ function renderData(showData) {
 
 
 var colors = ['red', 'blue', 'black'];
-var blueIndex = colors.findIndex(function (item) {
+var colorNumber = colors.findIndex(function (item) {
   return item == 'black';
 });
-console.log(blueIndex);
+console.log(colorNumber);
+console.log('--------------------------------------'); // 訂單編號
+
+var orders = [{
+  name: '小廖',
+  orderId: '1234555'
+}, {
+  name: '小華',
+  orderId: '1234556'
+}, {
+  name: '小美',
+  orderId: '1234557'
+}];
+var huaId = orders.findIndex(function (item) {
+  return item.orderId == '1234556';
+});
+console.log(huaId);
+console.log("\u9019\u500B\u8A02\u55AE\u7DE8\u865F\u662F".concat(orders[huaId].name));
 //# sourceMappingURL=all.js.map
