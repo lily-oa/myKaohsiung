@@ -30,8 +30,32 @@ function renderData(showData) {
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // findIndex 索引  編號
 const colors = ['red', 'blue', 'black']; 
-const blueIndex = colors.findIndex(function(item){
+const colorNumber = colors.findIndex(function(item){
   return item == 'black';
+}); 
+console.log(colorNumber);
+
+console.log('--------------------------------------');
+
+// 訂單編號
+const orders = [
+  {
+    name: '小廖',
+    orderId: '1234555'
+  },
+  {
+    name: '小華',
+    orderId: '1234556'
+  },
+  {
+    name: '小美',
+    orderId: '1234557'
+  }
+]
+
+const huaId = orders.findIndex(function(item){
+  return item.orderId == '1234556';
 });
 
-console.log(blueIndex);
+console.log(huaId);
+console.log(`這個訂單編號是${orders[huaId].name}`);
