@@ -54,7 +54,7 @@ var scoreData = [{
   name: '小花',
   score: 53
 }];
-var filterScore = scoreData.filter(function (item) {
+var filterScore = scoreData.find(function (item) {
   return item.score >= 60;
 });
 console.log(filterScore);
