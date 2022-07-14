@@ -54,7 +54,7 @@ const orders = [
 ]
 
 const huaId = orders.findIndex(function(item){
-  return item.orderId == '1234556';
+  return item.orderId == '1234557';
 });
 
 console.log(huaId);
