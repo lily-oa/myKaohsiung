@@ -28,32 +28,10 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// JS array filter、 find篩選
-const arr = [1, 2, 3, 4, 5, 10, 20, 30, 40];
-const newArr = arr.find(function(item){
-  console.log(item);   //看陣列跑了幾次
-  return item >= 5; 
+// findIndex 索引  編號
+const colors = ['red', 'blue', 'black']; 
+const blueIndex = colors.findIndex(function(item){
+  return item == 'black';
 });
 
-console.log(newArr);
-
-//分數
-const scoreData = [
-  {
-    name: '小明',
-    score: 88
-  },
-  {
-    name: '小應',
-    score: 62
-  },
-  {
-    name: '小花',
-    score: 53
-  }
-]
-const filterScore = scoreData.find(function(item){
-  return item.score >= 60;
-});
-
-console.log(filterScore);
+console.log(blueIndex);
