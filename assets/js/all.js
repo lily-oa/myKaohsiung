@@ -33,29 +33,12 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// JS array filter、 find篩選
+// findIndex 索引  編號
 
 
-var arr = [1, 2, 3, 4, 5, 10, 20, 30, 40];
-var newArr = arr.find(function (item) {
-  console.log(item); //看陣列跑了幾次
-
-  return item >= 5;
+var colors = ['red', 'blue', 'black'];
+var blueIndex = colors.findIndex(function (item) {
+  return item == 'black';
 });
-console.log(newArr); //分數
-
-var scoreData = [{
-  name: '小明',
-  score: 88
-}, {
-  name: '小應',
-  score: 62
-}, {
-  name: '小花',
-  score: 53
-}];
-var filterScore = scoreData.find(function (item) {
-  return item.score >= 60;
-});
-console.log(filterScore);
+console.log(blueIndex);
 //# sourceMappingURL=all.js.map
