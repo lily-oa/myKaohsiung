@@ -33,5 +33,23 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// 箭頭函式
+// 箭頭函式 
+
+
+var numAA = function numAA(y) {
+  return y * y;
+};
+
+var numA = function numA(x) {
+  return x * x * x;
+};
+
+var numB = function numB(x, y) {
+  var a = 3;
+  var b = 4;
+  return a * b * x * x * y;
+};
+
+console.log(numA(7));
+console.log(numB(4, 5));
 //# sourceMappingURL=all.js.map
