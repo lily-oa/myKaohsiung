@@ -29,8 +29,18 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 箭頭函式 
-const numA = function(x){
-  return x * x;
+const numAA = function(y){
+  return y * y;
 }
 
-console.log(numA(3));
+const numA = (x) => {
+  return x * x * x;
+}
+
+const numB = (x, y) => {
+  const a = 3;
+  const b = 4;
+  return a * b * x * x * y;
+}
+console.log(numA(7));
+console.log(numB(4, 5));
