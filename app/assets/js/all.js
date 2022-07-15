@@ -29,17 +29,3 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 箭頭函式
-// 函式陳述式
-function numA(x){
-  return x * x; 
-}
-
-console.log(numA(10));
-
-// 函式表達式
-const numB = function(x){
-  return x * x;
-}
-
-numB(3);
-console.log(numB(3));
