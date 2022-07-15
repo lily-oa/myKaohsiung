@@ -28,34 +28,18 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// findIndex 索引  編號
-const colors = ['red', 'blue', 'black']; 
-const colorNumber = colors.findIndex(function(item){
-  return item == 'black';
-}); 
-console.log(colorNumber);
+// 箭頭函式
+// 函式陳述式
+function numA(x){
+  return x * x; 
+}
 
-console.log('--------------------------------------');
+console.log(numA(10));
 
-// 訂單編號
-const orders = [
-  {
-    name: '小廖',
-    orderId: '1234555'
-  },
-  {
-    name: '小華',
-    orderId: '1234556'
-  },
-  {
-    name: '小美',
-    orderId: '1234557'
-  }
-]
+// 函式表達式
+const numB = function(x){
+  return x * x;
+}
 
-const huaId = orders.findIndex(function(item){
-  return item.orderId == '1234557';
-});
-
-console.log(huaId);
-console.log(`這個訂單編號是${orders[huaId].name}`);
+numB(3);
+console.log(numB(3));
