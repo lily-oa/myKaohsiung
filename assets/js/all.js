@@ -34,22 +34,20 @@ function renderData(showData) {
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 箭頭函式 
+// 原本的
+// const num = (x) => {
+//  return `數字相乘 ${x * x}`;
+// }
+// 縮寫寫法
+// 1.如果函式搭配到 return，可以不寫return 
+// 2.如果參數只有一個，可以省略小括號
+// 3.沒有參數，還是要有空括號
+// 4.陣列操作 map、filter
 
 
-var numAA = function numAA(y) {
-  return y * y;
+var num = function num(x) {
+  return "\u6578\u5B57\u76F8\u4E58 ".concat(x * x);
 };
 
-var numA = function numA(x) {
-  return x * x * x;
-};
-
-var numB = function numB(x, y) {
-  var a = 3;
-  var b = 4;
-  return a * b * x * x * y;
-};
-
-console.log(numA(7));
-console.log(numB(4, 5));
+console.log(num(4));
 //# sourceMappingURL=all.js.map
