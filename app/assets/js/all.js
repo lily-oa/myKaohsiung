@@ -29,18 +29,18 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 箭頭函式 
-const numAA = function(y){
-  return y * y;
-}
 
-const numA = (x) => {
-  return x * x * x;
-}
+// 原本的
+// const num = (x) => {
+//  return `數字相乘 ${x * x}`;
+// }
 
-const numB = (x, y) => {
-  const a = 3;
-  const b = 4;
-  return a * b * x * x * y;
-}
-console.log(numA(7));
-console.log(numB(4, 5));
+// 縮寫寫法
+// 1.如果函式搭配到 return，可以不寫return 
+// 2.如果參數只有一個，可以省略小括號
+// 3.沒有參數，還是要有空括號
+// 4.陣列操作 map、filter
+const num = (x) => `數字相乘 ${x * x}`;
+
+
+console.log(num(4));
