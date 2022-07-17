@@ -43,11 +43,4 @@ function renderData(showData) {
 // 2.如果參數只有一個，可以省略小括號
 // 3.沒有參數，還是要有空括號
 // 4.陣列操作 map、filter
-
-
-var num = function num(x) {
-  return "\u6578\u5B57\u76F8\u4E58 ".concat(x * x);
-};
-
-console.log(num(4));
 //# sourceMappingURL=all.js.map
