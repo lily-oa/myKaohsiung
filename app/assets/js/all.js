@@ -29,15 +29,12 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 箭頭函式 
+// 陣列操作 map、filter
 
-// 原本的
-// const num = (x) => {
-//  return `數字相乘 ${x * x}`;
-// }
+const data = [1, 8, 13, 20]; 
 
-// 縮寫寫法
-// 1.如果函式搭配到 return，可以不寫return 
-// 2.如果參數只有一個，可以省略小括號
-// 3.沒有參數，還是要有空括號
-// 4.陣列操作 map、filter
+const newData = data.map(function(item){
+  return item+2;
+});
 
+console.log(newData); 
