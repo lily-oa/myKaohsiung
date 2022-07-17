@@ -31,7 +31,7 @@ function renderData(showData) {
 // 箭頭函式 
 // 陣列操作 map、filter
 
-const data = [1, 8, 13, 20]; 
+const mydata = [1, 8, 13, 20]; 
 
 const newData = data.map(function(item){
   return item+2;
