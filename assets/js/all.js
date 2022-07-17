@@ -37,9 +37,10 @@ function renderData(showData) {
 // 陣列操作 map、filter
 
 
-var mydata = [1, 8, 13, 20];
-var newData = data.map(function (item) {
-  return item + 2;
+var mydata = [1, 8, 13, 20]; //如果是多行設定還是要寫大括號及return 
+
+var newData = mydata.filter(function (item) {
+  return item > 10;
 });
 console.log(newData);
 //# sourceMappingURL=all.js.map
