@@ -33,14 +33,4 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// 箭頭函式 
-// 陣列操作 map、filter
-
-
-var mydata = [1, 8, 13, 20]; //如果是多行設定還是要寫大括號及return 
-
-var newData = mydata.filter(function (item) {
-  return item > 10;
-});
-console.log(newData);
 //# sourceMappingURL=all.js.map
