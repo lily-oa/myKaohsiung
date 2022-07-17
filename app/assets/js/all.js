@@ -33,8 +33,10 @@ function renderData(showData) {
 
 const mydata = [1, 8, 13, 20]; 
 
-const newData = data.map(function(item){
-  return item+2;
+//如果是多行設定還是要寫大括號及return 
+const newData = mydata.filter((item) => {
+
+  return item > 10;
 });
 
-console.log(newData); 
+console.log(newData);
