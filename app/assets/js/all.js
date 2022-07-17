@@ -40,7 +40,4 @@ function renderData(showData) {
 // 2.如果參數只有一個，可以省略小括號
 // 3.沒有參數，還是要有空括號
 // 4.陣列操作 map、filter
-const num = (x) => `數字相乘 ${x * x}`;
 
-
-console.log(num(4));
