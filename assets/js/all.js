@@ -33,4 +33,12 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
+// forEach 陣列處理方法，只有陣列才可以使用
+
+
+var mydata = [30, 40];
+mydata.forEach(function (item, index, array) {
+  console.log(item, index, array);
+});
+console.log('hello');
 //# sourceMappingURL=all.js.map
