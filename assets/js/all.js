@@ -36,9 +36,12 @@ function renderData(showData) {
 // forEach 陣列處理方法，只有陣列才可以使用
 
 
-var mydata = [30, 40];
-mydata.forEach(function (item, index, array) {
-  console.log(item, index, array);
+var myData = [30, 40, 100, 3333, 555579];
+var total = 0;
+myData.forEach(function (item, index) {
+  total += item; //累加
+
+  console.log("\u9019\u662F".concat(total));
 });
-console.log('hello');
+console.log(total);
 //# sourceMappingURL=all.js.map
