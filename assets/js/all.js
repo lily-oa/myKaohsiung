@@ -33,17 +33,5 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// forEach 讀取陣列資料 字串 物件 陣列
-
-
-var myData = [{
-  name: "Tom",
-  sex: "man"
-}, {
-  name: "Mary",
-  sex: "woman"
-}];
-myData.forEach(function (item) {
-  console.log(item);
-});
+// forEach 高雄open data-觀看免費與投幣式充電站有幾處
 //# sourceMappingURL=all.js.map
