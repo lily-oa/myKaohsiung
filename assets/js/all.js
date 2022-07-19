@@ -36,13 +36,6 @@ function renderData(showData) {
 // forEach 陣列處理方法，只有陣列才可以使用
 
 
-var myData = [30, 40, 50, 60, 70];
-var total = 1000;
-var anotherTotal = 0;
-myData.forEach(function (item) {
-  total -= item;
-  anotherTotal += item;
-});
-console.log(total);
-console.log(anotherTotal);
+var myData = [30, 40, 100, 33333, 55596];
+var total = 0;
 //# sourceMappingURL=all.js.map
