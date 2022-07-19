@@ -30,14 +30,13 @@ function renderData(showData) {
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // forEach 陣列處理方法，只有陣列才可以使用
 
-let myData = [30, 40, 100, 3333, 555579];
-
-
-let total = 0;
-myData.forEach((item, index) => {
-  
-  total += item;     //累加
-  console.log(`這是${total}`);
+let myData = [30, 40, 50, 60, 70];
+let total = 1000;
+let anotherTotal = 0; 
+myData.forEach((item) => {
+  total -= item;
+  anotherTotal += item;
 });
 
 console.log(total);
+console.log(anotherTotal);
