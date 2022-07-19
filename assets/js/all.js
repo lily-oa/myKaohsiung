@@ -36,6 +36,12 @@ function renderData(showData) {
 // forEach 陣列處理方法，只有陣列才可以使用
 
 
-var myData = [30, 40, 100, 33333, 55596];
-var total = 0;
+var myData = [30, 40, 100, 33333, 555596];
+var newData = [];
+myData.forEach(function (item) {
+  if (item % 2 == 0) {
+    newData.push(item);
+  }
+});
+console.log(newData);
 //# sourceMappingURL=all.js.map
