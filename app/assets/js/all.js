@@ -29,6 +29,13 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // forEach 陣列處理方法，只有陣列才可以使用
-let myData = [30, 40, 100, 33333, 55596]; 
-let total = 0; 
+let myData = [30, 40, 100, 33333, 555596]; 
+let newData = [];
 
+myData.forEach((item) => {
+  if(item%2==0){
+    newData.push(item);
+  }
+});
+
+console.log(newData);
