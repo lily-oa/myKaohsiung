@@ -29,8 +29,17 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // forEach 讀取陣列資料 字串 物件 陣列
-let myData = [30, "hello", true];
+let myData = [
+  {
+    name: "Tom", 
+    sex: "man"
+  },
+  {
+    name: "Mary", 
+    sex: "woman"
+  }
+];
 
 myData.forEach((item) => {
-  conosle.log(item);
+  console.log(item);
 });
