@@ -36,8 +36,14 @@ function renderData(showData) {
 // forEach 讀取陣列資料 字串 物件 陣列
 
 
-var myData = [30, "hello", true];
+var myData = [{
+  name: "Tom",
+  sex: "man"
+}, {
+  name: "Mary",
+  sex: "woman"
+}];
 myData.forEach(function (item) {
-  conosle.log(item);
+  console.log(item);
 });
 //# sourceMappingURL=all.js.map
