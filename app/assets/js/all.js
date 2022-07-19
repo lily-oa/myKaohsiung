@@ -28,7 +28,7 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// forEach 讀取陣列資料 字串 物件 陣列
+// forEach 計算男女生的總數
 let myData = [
   {
     name: "Tom", 
@@ -37,9 +37,33 @@ let myData = [
   {
     name: "Mary", 
     sex: "woman"
-  }
+  },
+  {
+    name: "Jane", 
+    sex: "woman"
+  },
+  {
+    name: "Jenny", 
+    sex: "woman"
+  },
+  {
+    name: "Angle", 
+    sex: "woman"
+  },
 ];
 
-myData.forEach((item) => {
-  console.log(item);
+//可以先設定一個初始化的物件
+let people = {
+  man: 0,
+  woman: 0
+}
+
+myData.forEach((item) => {  
+  if(item.sex == "woman"){
+    people.woman += 1;
+  }else{
+    people.man += 1;
+  }
 });
+
+console.log(people);
