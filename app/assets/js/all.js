@@ -29,14 +29,6 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // forEach 陣列處理方法，只有陣列才可以使用
+let data = [30, 40, 100, 33333, 55596]; 
+let total = 0; 
 
-let myData = [30, 40, 50, 60, 70];
-let total = 1000;
-let anotherTotal = 0; 
-myData.forEach((item) => {
-  total -= item;
-  anotherTotal += item;
-});
-
-console.log(total);
-console.log(anotherTotal);
