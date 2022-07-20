@@ -41,7 +41,7 @@ let myData = [
     name: '小花充電站'
   },
   {
-    Charge: '投幣式',四
+    Charge: '投幣式',
     name: '小明充電站'
   },
   {
