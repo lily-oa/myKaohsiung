@@ -63,4 +63,3 @@ myData.forEach((item, index) => {
   }
 });
 console.log(`目前免費充電站有${total.free.length}處`);
-console.log(`目前投幣式充電站有${total.paid.length}處`);
