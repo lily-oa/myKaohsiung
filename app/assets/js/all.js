@@ -174,14 +174,15 @@ let total = {
   paid: 0
 }
 
-myData.forEach((item, index) => {
+myData.forEach((item) => {
   // console.log(item.Charge);
-  if(item.Charge == "免費"){
+  if(item.Charge == '免費'){
     total.free += 1;
   }else{
-    total.paid += 1;
+    total.paid +=1;
   }
 });
 
-console.log(`高雄充電站免費的有${total.free}處`);
-console.log(`高雄充電站投幣式的有${total.paid}處`);
+console.log(total);
+console.log(`高雄充電站免費的有${total.free}站`);
+console.log(`高雄充電站投幣式的有${total.paid}站`);
