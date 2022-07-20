@@ -722,14 +722,15 @@ var total = {
   free: 0,
   paid: 0
 };
-myData.forEach(function (item, index) {
+myData.forEach(function (item) {
   // console.log(item.Charge);
-  if (item.Charge == "免費") {
+  if (item.Charge == '免費') {
     total.free += 1;
   } else {
     total.paid += 1;
   }
 });
-console.log("\u9AD8\u96C4\u5145\u96FB\u7AD9\u514D\u8CBB\u7684\u6709".concat(total.free, "\u8655"));
-console.log("\u9AD8\u96C4\u5145\u96FB\u7AD9\u6295\u5E63\u5F0F\u7684\u6709".concat(total.paid, "\u8655"));
+console.log(total);
+console.log("\u9AD8\u96C4\u5145\u96FB\u7AD9\u514D\u8CBB\u7684\u6709".concat(total.free, "\u7AD9"));
+console.log("\u9AD8\u96C4\u5145\u96FB\u7AD9\u6295\u5E63\u5F0F\u7684\u6709".concat(total.paid, "\u7AD9"));
 //# sourceMappingURL=all.js.map
