@@ -167,4 +167,21 @@ let myData = [{"Kind":"公共充電站","Charge":"免費","Location":"新興區�
 {"Kind":"公共充電站","Charge":"免費","Location":"高雄第一科技大學","Address":"高雄市楠梓區卓越路2號"},
 {"Kind":"公共充電站","Charge":"投幣式","Location":"皇苑逸品苑","Address":"高雄市鼓山區美術北三路100號"}]
 
-console.log(myData);
+
+// 先初始化物件
+let total = {
+  free: 0,
+  paid: 0
+}
+
+myData.forEach((item, index) => {
+  // console.log(item.Charge);
+  if(item.Charge == "免費"){
+    total.free += 1;
+  }else{
+    total.paid += 1;
+  }
+});
+
+console.log(`高雄充電站免費的有${total.free}處`);
+console.log(`高雄充電站投幣式的有${total.paid}處`);
