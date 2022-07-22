@@ -48,3 +48,4 @@ let myData = [
 ]
 
 const list = document.querySelector('.list');
+list.innerHTML = `<li>hello</li>`;
