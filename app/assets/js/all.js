@@ -47,12 +47,20 @@ let myData = [
   },
 ]
 
-const list = document.querySelector('.list');
-let str = '';  //初始值
-myData.forEach((item) => {
-  // console.log(`${item.name}，${item.Charge}`);
-  let content = `<li class="fw-bold list-style-disc">•${item.name}，${item.Charge}</li>`;
-  str += content;
-  console.log(str);
-});
-list.innerHTML = str;
+//可以將此設定成一個初始化的 function 
+function init() {
+  const list = document.querySelector('.list');
+  let str = '';  //初始值
+  myData.forEach((item) => {
+    // console.log(`${item.name}，${item.Charge}`);
+    let content = `<li class="fw-bold list-style-disc">•${item.name}，${item.Charge}</li>`;
+    str += content;
+    console.log(str);
+  });
+  list.innerHTML = str;
+}
+
+init();
+
+// 監聽按鈕
+const stationFilter = document.querySelector('.filter');
