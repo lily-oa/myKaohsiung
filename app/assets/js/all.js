@@ -53,14 +53,35 @@ function init() {
   let str = '';  //初始值
   myData.forEach((item) => {
     // console.log(`${item.name}，${item.Charge}`);
-    let content = `<li class="fw-bold list-style-disc">•${item.name}，${item.Charge}</li>`;
+    let content = `<li class="fw-bold">•${item.name}，${item.Charge}</li>`;
     str += content;
-    console.log(str);
+    // console.log(str);
   });
   list.innerHTML = str;
 }
 
 init();
 
-// 監聽按鈕
+// 監聽它有沒有抓到資料
 const stationFilter = document.querySelector('.filter');
+// console.log(stationFilter);
+stationFilter.addEventListener('click', function (e) {
+  // console.log(e.target.value == undefined);
+  if (e.target.value == undefined) {
+    console.log('你按到空白處了!!');
+    return;  //中斷程式
+  } else {
+    // console.log(e.target.value);
+    let str = '';
+    myData.forEach((item, index) => {
+      // console.log(e.target.value == item.Charge);
+      if (e.target.value == item.Charge) {
+        str += `<li>•${item.name}，${item.Charge}</li>`;
+      }
+    });
+    const list = document.querySelector('.list');
+    list.innerHTML = str;
+  }
+});
+
+
