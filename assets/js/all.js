@@ -47,15 +47,40 @@ var myData = [{
 }, {
   Charge: '投幣式',
   name: '你好充電站'
-}];
-var list = document.querySelector('.list');
-var str = ''; //初始值
+}]; //可以將此設定成一個初始化的 function 
 
-myData.forEach(function (item) {
-  // console.log(`${item.name}，${item.Charge}`);
-  var content = "<li class=\"fw-bold list-style-disc\">\u2022".concat(item.name, "\uFF0C").concat(item.Charge, "</li>");
-  str += content;
-  console.log(str);
+function init() {
+  var list = document.querySelector('.list');
+  var str = ''; //初始值
+
+  myData.forEach(function (item) {
+    // console.log(`${item.name}，${item.Charge}`);
+    var content = "<li class=\"fw-bold\">\u2022".concat(item.name, "\uFF0C").concat(item.Charge, "</li>");
+    str += content; // console.log(str);
+  });
+  list.innerHTML = str;
+}
+
+init(); // 監聽它有沒有抓到資料
+
+var stationFilter = document.querySelector('.filter'); // console.log(stationFilter);
+
+stationFilter.addEventListener('click', function (e) {
+  // console.log(e.target.value == undefined);
+  if (e.target.value == undefined) {
+    console.log('你按到空白處了!!');
+    return; //中斷程式
+  } else {
+    // console.log(e.target.value);
+    var str = '';
+    myData.forEach(function (item, index) {
+      // console.log(e.target.value == item.Charge);
+      if (e.target.value == item.Charge) {
+        str += "<li>\u2022".concat(item.name, "\uFF0C").concat(item.Charge, "</li>");
+      }
+    });
+    var list = document.querySelector('.list');
+    list.innerHTML = str;
+  }
 });
-list.innerHTML = str;
 //# sourceMappingURL=all.js.map
