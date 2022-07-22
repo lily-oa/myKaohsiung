@@ -28,3 +28,23 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
+let myData = [
+  {
+    Charge: '免費',
+    name: '廖肴杰充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '廖肴杰充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '廖肴杰充電站'
+  },
+  {
+    Charge: '投幣式',
+    name: '廖肴杰充電站'
+  },
+]
+
+const list = document.querySelector('.list');
