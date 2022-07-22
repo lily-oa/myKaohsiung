@@ -75,6 +75,7 @@ stationFilter.addEventListener('click', function (e) {
     let str = '';
     myData.forEach((item, index) => {
       // console.log(e.target.value == item.Charge);
+      // 篩選功能
       if (e.target.value == item.Charge) {
         str += `<li>•${item.name}，${item.Charge}</li>`;
       }
