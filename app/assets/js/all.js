@@ -35,17 +35,24 @@ let myData = [
   },
   {
     Charge: '投幣式',
-    name: '廖肴杰充電站'
+    name: '小花杰充電站'
   },
   {
     Charge: '投幣式',
-    name: '廖肴杰充電站'
+    name: '小明杰充電站'
   },
   {
     Charge: '投幣式',
-    name: '廖肴杰充電站'
+    name: '你好充電站'
   },
 ]
 
 const list = document.querySelector('.list');
-list.innerHTML = `<li>hello</li>`;
+let str = '';  //初始值
+myData.forEach((item) => {
+  // console.log(`${item.name}，${item.Charge}`);
+  let content = `<li class="fw-bold list-style-disc">${item.name}，${item.Charge}</li>`;
+  str += content;
+  console.log(str);
+});
+list.innerHTML = str;
