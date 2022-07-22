@@ -40,14 +40,22 @@ var myData = [{
   name: '廖肴杰充電站'
 }, {
   Charge: '投幣式',
-  name: '廖肴杰充電站'
+  name: '小花杰充電站'
 }, {
   Charge: '投幣式',
-  name: '廖肴杰充電站'
+  name: '小明杰充電站'
 }, {
   Charge: '投幣式',
-  name: '廖肴杰充電站'
+  name: '你好充電站'
 }];
 var list = document.querySelector('.list');
-list.innerHTML = "<li>hello</li>";
+var str = ''; //初始值
+
+myData.forEach(function (item) {
+  // console.log(`${item.name}，${item.Charge}`);
+  var content = "<li class=\"fw-bold list-style-disc\">\u2022".concat(item.name, "\uFF0C").concat(item.Charge, "</li>");
+  str += content;
+  console.log(str);
+});
+list.innerHTML = str;
 //# sourceMappingURL=all.js.map
