@@ -51,7 +51,7 @@ const list = document.querySelector('.list');
 let str = '';  //初始值
 myData.forEach((item) => {
   // console.log(`${item.name}，${item.Charge}`);
-  let content = `<li class="fw-bold list-style-disc">${item.name}，${item.Charge}</li>`;
+  let content = `<li class="fw-bold list-style-disc">•${item.name}，${item.Charge}</li>`;
   str += content;
   console.log(str);
 });
