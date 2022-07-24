@@ -49,7 +49,7 @@ let myData = [
 
 const list = document.querySelector('.list');  //抽出讓兩邊都能使用
 
-//可以將此設定成一個初始化的 function 
+//初始化邏輯，一開始載入的畫面顯示
 function init() {
   
   let str = '';  //初始值
@@ -62,7 +62,8 @@ function init() {
 
 init();
 
-// 監聽它有沒有抓到資料
+
+// 篩選器邏輯，監聽它有沒有抓到資料
 const stationFilter = document.querySelector('.filter');  
 
 stationFilter.addEventListener('click', function (e) {
@@ -83,4 +84,20 @@ stationFilter.addEventListener('click', function (e) {
     });
     list.innerHTML = str;  // innerHTML 當你按點擊時它會把裡面的內容全部清空再將字串放入
   }
+});
+
+// 新增邏輯
+const stationName = document.querySelector('.stationName');
+const stationCharge = document.querySelector('.stationCharge');
+const myBtn = document.querySelector('.myBtn');
+
+// 必須先取值，再將資料變成物件格式 push到 myData陣列裡去，最後將新增的資料顯示在頁面上
+myBtn.addEventListener('click', (e) => {
+  console.log(stationName.value);
+  console.log(stationCharge.value);
+// 物件初始化，組出新的物件格式
+  let obj = {};
+  obj.Charge = stationCharge.value;
+  obj.name = stationName.value;
+  console.log(obj);
 });
