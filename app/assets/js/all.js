@@ -47,15 +47,15 @@ let myData = [
   },
 ]
 
+const list = document.querySelector('.list');  //抽出讓兩邊都能使用
+
 //可以將此設定成一個初始化的 function 
 function init() {
-  const list = document.querySelector('.list');
+  
   let str = '';  //初始值
   myData.forEach((item) => {
-    // console.log(`${item.name}，${item.Charge}`);
     let content = `<li class="fw-bold">•${item.name}，${item.Charge}</li>`;
     str += content;
-    // console.log(str);
   });
   list.innerHTML = str;
 }
@@ -63,26 +63,24 @@ function init() {
 init();
 
 // 監聽它有沒有抓到資料
-const stationFilter = document.querySelector('.filter');
-// console.log(stationFilter);
+const stationFilter = document.querySelector('.filter');  
 
-stationFilter.addEventListener('click', function(e){
-  // console.log(e.target.value==undefined);
-  if(e.target.value==undefined){
+stationFilter.addEventListener('click', function (e) {
+  if (e.target.value == undefined) {
     console.log('你點擊到空的地方');
     return;
-  }else{
+  } else {
     let str = '';  // 設定初始化
     myData.forEach((item, index) => {
-      // console.log(item.Charge);
-      if(e.target.value==item.Charge){
-        // console.log(`<li>${item.name},${item.Charge}</li>`);
-       let content = `<li>${item.name},${item.Charge}</li>`;
-       str += content;
-       // console.log(str);
+      // 如果選擇的是 "全部 "的按鈕時，就讓它顯示全部的字串
+      if(e.target.value=='全部'){
+        let content = `<li class="fw-bold">•${item.name}，${item.Charge}</li>`;
+        str += content;
+      }else if(e.target.value == item.Charge) {
+        let content = `<li class="fw-bold">•${item.name}，${item.Charge}</li>`;
+        str += content;
       }
     });
-    const list = document.querySelector('.list');
     list.innerHTML = str;  // innerHTML 當你按點擊時它會把裡面的內容全部清空再將字串放入
   }
 });
