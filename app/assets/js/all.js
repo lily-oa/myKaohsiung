@@ -65,24 +65,24 @@ init();
 // 監聽它有沒有抓到資料
 const stationFilter = document.querySelector('.filter');
 // console.log(stationFilter);
-stationFilter.addEventListener('click', function (e) {
-  // console.log(e.target.value == undefined);
-  if (e.target.value == undefined) {
-    console.log('你按到空白處了!!');
-    return;  //中斷程式
-  } else {
-    // console.log(e.target.value);
-    let str = '';
+
+stationFilter.addEventListener('click', function(e){
+  // console.log(e.target.value==undefined);
+  if(e.target.value==undefined){
+    console.log('你點擊到空的地方');
+    return;
+  }else{
+    let str = '';  // 設定初始化
     myData.forEach((item, index) => {
-      // console.log(e.target.value == item.Charge);
-      // 篩選功能
-      if (e.target.value == item.Charge) {
-        str += `<li>•${item.name}，${item.Charge}</li>`;
+      // console.log(item.Charge);
+      if(e.target.value==item.Charge){
+        // console.log(`<li>${item.name},${item.Charge}</li>`);
+       let content = `<li>${item.name},${item.Charge}</li>`;
+       str += content;
+       // console.log(str);
       }
     });
     const list = document.querySelector('.list');
-    list.innerHTML = str;
+    list.innerHTML = str;  // innerHTML 當你按點擊時它會把裡面的內容全部清空再將字串放入
   }
 });
-
-
