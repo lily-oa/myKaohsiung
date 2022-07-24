@@ -93,3 +93,13 @@ const myBtn = document.querySelector('.myBtn');
 
 // 必須先取值，再將資料變成物件格式 push到 myData陣列裡去，最後將新增的資料顯示在頁面上
 
+myBtn.addEventListener('click', (e) => {
+  let obj = {};
+  obj.Charge = stationCharge.value;
+  obj.name = stationName.value;
+  myData.push(obj);
+  console.log(myData);
+  init();
+  stationCharge.value = '免費';
+  stationName.value = '';
+});
