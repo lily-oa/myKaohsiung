@@ -86,7 +86,7 @@ stationFilter.addEventListener('click', function (e) {
   }
 });
 
-// 新增邏輯
+// 新增邏輯，input可以直接取值
 const stationName = document.querySelector('.stationName');
 const stationCharge = document.querySelector('.stationCharge');
 const myBtn = document.querySelector('.myBtn');
