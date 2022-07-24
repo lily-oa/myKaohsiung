@@ -47,26 +47,24 @@ var myData = [{
 }, {
   Charge: '投幣式',
   name: '你好充電站'
-}]; //可以將此設定成一個初始化的 function 
+}];
+var list = document.querySelector('.list'); //抽出讓兩邊都能使用
+//初始化邏輯，一開始載入的畫面顯示
 
 function init() {
-  var list = document.querySelector('.list');
   var str = ''; //初始值
 
   myData.forEach(function (item) {
-    // console.log(`${item.name}，${item.Charge}`);
     var content = "<li class=\"fw-bold\">\u2022".concat(item.name, "\uFF0C").concat(item.Charge, "</li>");
-    str += content; // console.log(str);
+    str += content;
   });
   list.innerHTML = str;
 }
 
-init(); // 監聽它有沒有抓到資料
+init(); // 篩選器邏輯，監聽它有沒有抓到資料
 
-var stationFilter = document.querySelector('.filter'); // console.log(stationFilter);
-
+var stationFilter = document.querySelector('.filter');
 stationFilter.addEventListener('click', function (e) {
-  // console.log(e.target.value==undefined);
   if (e.target.value == undefined) {
     console.log('你點擊到空的地方');
     return;
@@ -74,15 +72,37 @@ stationFilter.addEventListener('click', function (e) {
     var str = ''; // 設定初始化
 
     myData.forEach(function (item, index) {
-      // console.log(item.Charge);
-      if (e.target.value == item.Charge) {
-        // console.log(`<li>${item.name},${item.Charge}</li>`);
-        var content = "<li>".concat(item.name, ",").concat(item.Charge, "</li>");
-        str += content; // console.log(str);
+      // 如果選擇的是 "全部 "的按鈕時，就讓它顯示全部的字串
+      if (e.target.value == '全部') {
+        var content = "<li class=\"fw-bold\">\u2022".concat(item.name, "\uFF0C").concat(item.Charge, "</li>");
+        str += content;
+      } else if (e.target.value == item.Charge) {
+        var _content = "<li class=\"fw-bold\">\u2022".concat(item.name, "\uFF0C").concat(item.Charge, "</li>");
+
+        str += _content;
       }
     });
-    var list = document.querySelector('.list');
     list.innerHTML = str; // innerHTML 當你按點擊時它會把裡面的內容全部清空再將字串放入
   }
+}); // 新增邏輯，input可以直接取值
+
+var stationName = document.querySelector('.stationName');
+var stationCharge = document.querySelector('.stationCharge');
+var myBtn = document.querySelector('.myBtn'); // 必須先取值，再將資料變成物件格式 push到 myData陣列裡去，最後將新增的資料顯示在頁面上
+
+myBtn.addEventListener('click', function (e) {
+  console.log(stationName.value);
+  console.log(stationCharge.value); // 物件初始化，組出新的物件格式
+
+  var obj = {};
+  obj.Charge = stationCharge.value;
+  obj.name = stationName.value;
+  myData.push(obj);
+  console.log(myData);
+  init(); //將資料顯示在頁面 
+  // 資料按儲存後，將input清空
+
+  stationName.value = '';
+  stationCharge.value = '免費'; // 預設值
 });
 //# sourceMappingURL=all.js.map
