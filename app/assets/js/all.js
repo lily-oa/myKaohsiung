@@ -92,6 +92,7 @@ const stationCharge = document.querySelector('.stationCharge');
 const myBtn = document.querySelector('.myBtn');
 
 // 必須先取值，再將資料變成物件格式 push到 myData陣列裡去，最後將新增的資料顯示在頁面上
+
 myBtn.addEventListener('click', (e) => {
   console.log(stationName.value);
   console.log(stationCharge.value);
@@ -99,5 +100,12 @@ myBtn.addEventListener('click', (e) => {
   let obj = {};
   obj.Charge = stationCharge.value;
   obj.name = stationName.value;
-  console.log(obj);
+  myData.push(obj);
+  console.log(myData);
+
+  init();  //將資料顯示在頁面 
+  
+  // 資料按儲存後，將input清空
+  stationName.value = '';
+  stationCharge.value = '免費';   // 預設值
 });
