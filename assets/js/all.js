@@ -66,21 +66,23 @@ init(); // 監聽它有沒有抓到資料
 var stationFilter = document.querySelector('.filter'); // console.log(stationFilter);
 
 stationFilter.addEventListener('click', function (e) {
-  // console.log(e.target.value == undefined);
+  // console.log(e.target.value==undefined);
   if (e.target.value == undefined) {
-    console.log('你按到空白處了!!');
-    return; //中斷程式
+    console.log('你點擊到空的地方');
+    return;
   } else {
-    // console.log(e.target.value);
-    var str = '';
+    var str = ''; // 設定初始化
+
     myData.forEach(function (item, index) {
-      // console.log(e.target.value == item.Charge);
+      // console.log(item.Charge);
       if (e.target.value == item.Charge) {
-        str += "<li>\u2022".concat(item.name, "\uFF0C").concat(item.Charge, "</li>");
+        // console.log(`<li>${item.name},${item.Charge}</li>`);
+        var content = "<li>".concat(item.name, ",").concat(item.Charge, "</li>");
+        str += content; // console.log(str);
       }
     });
     var list = document.querySelector('.list');
-    list.innerHTML = str;
+    list.innerHTML = str; // innerHTML 當你按點擊時它會把裡面的內容全部清空再將字串放入
   }
 });
 //# sourceMappingURL=all.js.map
