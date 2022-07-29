@@ -34,6 +34,9 @@ let ary = [];
 
 axios.get('https://hexschool.github.io/ajaxHomework/data.json')
   .then(function(response){
+    console.log('資料有回傳了');
     ary = response.data;
-    console.log(ary);
+    
   });
+
+  console.log(ary);
