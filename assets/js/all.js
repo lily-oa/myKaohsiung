@@ -38,7 +38,9 @@ function renderData(showData) {
 
 var ary = [];
 axios.get('https://hexschool.github.io/ajaxHomework/data.json').then(function (response) {
+  console.log('資料有回傳了'); //這一行函式一定會執行
+
   ary = response.data;
-  console.log(ary);
 });
+console.log(ary);
 //# sourceMappingURL=all.js.map
