@@ -29,11 +29,11 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // https://hexschool.github.io/ajaxHomework/data.json
-axios.get('https://hexschool.github.io/ajaxHomework/data.json')  //抓取這個網址的資料並回傳回來
-  .then(function(response){        //抓取的資料回傳後才會觸發then裡的函式
-    let ary = response.data;       // 將抓到資料暫存在 ary，這是我的資料集
-    console.log(ary[0].name);      // 我只想抓它的名字
-    const title = document.querySelector('.title'); // 指定範圍
-    console.log(title);
-    title.innerHTML = ary[0].name; //將資料寫入網頁的指定範圍
+
+let ary = [];
+
+axios.get('https://hexschool.github.io/ajaxHomework/data.json')
+  .then(function(response){
+    ary = response.data;
+    console.log(ary);
   });
