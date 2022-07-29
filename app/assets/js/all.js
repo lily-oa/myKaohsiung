@@ -34,11 +34,15 @@ let ary = [];
 
 axios.get('https://hexschool.github.io/ajaxHomework/data.json')
   .then(function(response){
-    console.log('資料有回傳了');   //這一行函式一定會執行
-    ary = response.data;
-    
+    console.log('資料有回傳了');   //1
+    ary = response.data;  //等到資料回傳後，確實寫入陣列裡再觸發以下的函式
+    myRenderData();
   });
 
-  
-
-  console.log(ary);
+// 非同步，可以把另任函式都寫成一個指令，等確實有資料時再觸發函式
+  function myRenderData(){
+    console.log(ary);  //2
+    const title = document.querySelector('.title');
+    title.textContent = ary[0].name;
+  }
+  console.log(ary);  //3
