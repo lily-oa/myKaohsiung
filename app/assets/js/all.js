@@ -28,21 +28,7 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// https://hexschool.github.io/ajaxHomework/data.json
+// ajax post api
+// https://hexschool-tutorial.herokuapp.com/api/signup
 
-let ary = [];
 
-axios.get('https://hexschool.github.io/ajaxHomework/data.json')
-  .then(function(response){
-    console.log('資料有回傳了');   //1
-    ary = response.data;  //等到資料回傳後，確實寫入陣列裡再觸發以下的函式
-    myRenderData();
-  });
-
-// 非同步，可以把另任函式都寫成一個指令，等確實有資料時再觸發函式
-  function myRenderData(){
-    console.log(ary);  //2
-    const title = document.querySelector('.title');
-    title.textContent = ary[0].name;
-  }
-  console.log(ary);  //3
