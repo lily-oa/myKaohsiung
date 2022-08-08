@@ -40,6 +40,9 @@ function renderData(showData) {
 var account = document.querySelector('.account');
 var password = document.querySelector('.password');
 var send = document.querySelector('.send');
+send.addEventListener('click', function (e) {
+  console.log('有點到嗎');
+});
 
 function callSingUp() {
   var obj = {
