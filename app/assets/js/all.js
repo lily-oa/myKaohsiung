@@ -36,18 +36,8 @@ const password = document.querySelector('.password');
 const send = document.querySelector('.send');
 
 send.addEventListener('click', function(e){
-  console.log('有點到嗎');
+  callSingUp();
 });
-
-
-
-
-
-
-
-
-
-
 
 
 
