@@ -31,4 +31,35 @@ function renderData(showData) {
 // ajax post api
 // https://hexschool-tutorial.herokuapp.com/api/signup
 
+const account = document.querySelector('.account');
+const password = document.querySelector('.password');
+const send = document.querySelector('.send');
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function callSingUp(){
+  let obj = {
+    email: 'gonsakon3@gmail.com',
+    password: '123456'
+  }
+
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
+  .then(function(response){
+    console.log(response.data);
+  })
+  .catch(function(error){
+    console.log(error);
+  });
+}
