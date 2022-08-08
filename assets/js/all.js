@@ -35,4 +35,21 @@ function renderData(showData) {
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // ajax post api
 // https://hexschool-tutorial.herokuapp.com/api/signup
+
+
+var account = document.querySelector('.account');
+var password = document.querySelector('.password');
+var send = document.querySelector('.send');
+
+function callSingUp() {
+  var obj = {
+    email: 'gonsakon3@gmail.com',
+    password: '123456'
+  };
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj).then(function (response) {
+    console.log(response.data);
+  })["catch"](function (error) {
+    console.log(error);
+  });
+}
 //# sourceMappingURL=all.js.map
