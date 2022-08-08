@@ -40,16 +40,26 @@ send.addEventListener('click', function(e){
 });
 
 
-
 function callSingUp(){
-  let obj = {
-    email: 'gonsakon3@gmail.com',
-    password: '123456'
+  
+  if(account.value == '' || password.value == ''){
+    alert('請填寫正確資訊');
+    return;
   }
+  let obj = {};
+  obj.email = account.value;
+  obj.password = password.value;
+  console.log(obj);
 
   axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
   .then(function(response){
-    console.log(response.data);
+    if(response.data.message == '帳號註冊成功'){
+      alert('恭喜帳號註冊成功');
+    }else{
+      alert('帳號註冊失敗，有可能有人用你的email註冊');
+    }
+    account.value = '';
+    password.value = '';
   })
   .catch(function(error){
     console.log(error);
