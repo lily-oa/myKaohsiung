@@ -34,32 +34,21 @@ function renderData(showData) {
 const account = document.querySelector('.account');
 const password = document.querySelector('.password');
 const send = document.querySelector('.send');
-
 send.addEventListener('click', function(e){
   callSingUp();
 });
 
 
+
 function callSingUp(){
-  
-  if(account.value == '' || password.value == ''){
-    alert('請填寫正確資訊');
-    return;
-  }
   let obj = {};
   obj.email = account.value;
   obj.password = password.value;
   console.log(obj);
 
-  axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signup')
   .then(function(response){
-    if(response.data.message == '帳號註冊成功'){
-      alert('恭喜帳號註冊成功');
-    }else{
-      alert('帳號註冊失敗，有可能有人用你的email註冊');
-    }
-    account.value = '';
-    password.value = '';
+    console.log(response.data);
   })
   .catch(function(error){
     console.log(error);
