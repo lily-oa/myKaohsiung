@@ -46,7 +46,7 @@ send.addEventListener('click', function (e) {
 
 function callSingUp() {
   if (account.value == '' || password.value == '') {
-    alert('此空格不可為空，請填寫正確資料');
+    alert('請輸入正確資料');
     return;
   }
 
@@ -58,7 +58,7 @@ function callSingUp() {
     if (response.data.message == '帳號註冊成功') {
       alert('恭喜註冊成功');
     } else {
-      alert('帳號註冊失敗');
+      alert('帳號註冊失敗，可能有人用你的email註冊');
     }
 
     account.value = '';
@@ -66,5 +66,12 @@ function callSingUp() {
   })["catch"](function (error) {
     console.log(error);
   });
-}
+} //登入
+// https://hexschool-tutorial.herokuapp.com/api/signin
+
+
+var accountSignIn = document.querySelector('.account-signIn');
+var passwordSignIn = document.querySelector('.password-signIn');
+var sendSignIn = document.querySelector('.send-signIn');
+console.log(accountSignIn, passwordSignIn, sendSignIn);
 //# sourceMappingURL=all.js.map
