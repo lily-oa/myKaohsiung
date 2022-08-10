@@ -30,7 +30,7 @@ function renderData(showData) {
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // ajax post api
 // https://hexschool-tutorial.herokuapp.com/api/signup
-
+// 註冊
 const account = document.querySelector('.account');
 const password = document.querySelector('.password');
 const send = document.querySelector('.send');
@@ -73,7 +73,7 @@ sendSignIn.addEventListener('click', function(e){
 });
 
 function callSignIn(){
-  
+
   axios.post('https://hexschool-tutorial.herokuapp.com/api/signin')
   .then(function(response){
     console.log(response.data);
