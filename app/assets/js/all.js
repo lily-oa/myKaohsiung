@@ -38,22 +38,22 @@ send.addEventListener('click', function(e){
   callSingUp();
 });
 
+
 function callSingUp(){
-  if(account.value == '' || password.value == ''){
-    alert('此空格不可為空，請填寫正確資料');
+  if(account.value==''||password.value==''){
+    alert('請輸入正確資料');
     return;
   }
   let obj = {};
-  obj.email = account.value;  
+  obj.email = account.value;
   obj.password = password.value;
   console.log(obj);
-
   axios.post('https://hexschool-tutorial.herokuapp.com/api/signup', obj)
   .then(function(response){
-    if(response.data.message == '帳號註冊成功'){
+    if(response.data.message=='帳號註冊成功'){
       alert('恭喜註冊成功');
     }else{
-      alert('帳號註冊失敗');
+      alert('帳號註冊失敗，可能有人用你的email註冊');
     }
     account.value = '';
     password.value = '';
@@ -62,3 +62,11 @@ function callSingUp(){
     console.log(error);
   });
 }
+
+//登入
+// https://hexschool-tutorial.herokuapp.com/api/signin
+const accountSignIn = document.querySelector('.account-signIn');
+const passwordSignIn = document.querySelector('.password-signIn');
+const sendSignIn = document.querySelector('.send-signIn');
+
+console.log(accountSignIn, passwordSignIn, sendSignIn);
