@@ -41,10 +41,10 @@ var account = document.querySelector('.account');
 var password = document.querySelector('.password');
 var send = document.querySelector('.send');
 send.addEventListener('click', function (e) {
-  callSingUp();
+  callSignUp();
 });
 
-function callSingUp() {
+function callSignUp() {
   if (account.value == '' || password.value == '') {
     alert('請輸入正確資料');
     return;
@@ -73,5 +73,15 @@ function callSingUp() {
 var accountSignIn = document.querySelector('.account-signIn');
 var passwordSignIn = document.querySelector('.password-signIn');
 var sendSignIn = document.querySelector('.send-signIn');
-console.log(accountSignIn, passwordSignIn, sendSignIn);
+sendSignIn.addEventListener('click', function (e) {
+  callSignIn();
+});
+
+function callSignIn() {
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signin').then(function (response) {
+    console.log(response.data);
+  })["catch"](function (error) {
+    console.log(error);
+  });
+}
 //# sourceMappingURL=all.js.map
