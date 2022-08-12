@@ -79,12 +79,24 @@ sendSignIn.addEventListener('click', function (e) {
 });
 
 function callSignIn() {
+  if (accountSignIn.value == '' || passwordSignIn.value == '') {
+    alert('請填寫正確資料');
+    return;
+  }
+
   var obj2 = {};
   obj2.email = accountSignIn.value;
   obj2.password = passwordSignIn.value;
   console.log(obj2);
-  axious.post('https://hexschool-tutorial.herokuapp.com/api/signin').then(function (response) {
-    console.log(response.data);
+  axios.post('https://hexschool-tutorial.herokuapp.com/api/signin', obj2).then(function (response) {
+    if (response.data.message == '登入成功') {
+      alert('恭喜帳號註冊成功');
+    } else {
+      alert('帳號註冊失敗');
+    }
+
+    accountSignIn.value = '';
+    passwordSignIn.value = '';
   })["catch"](function (error) {
     console.log(error);
   });
