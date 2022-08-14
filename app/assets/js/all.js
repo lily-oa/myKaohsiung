@@ -31,6 +31,7 @@ function renderData(showData) {
 //data-屬性取值
 const title = document.querySelector('.title');
 console.log(title.getAttribute('data-content'));
+console.log(title.getAttribute('data-num'));
 
-let data2 = title.getAttribute('data-num');
-console.log(data);
+let data2 = title.getAttribute('data-content');
+console.log(data2);
