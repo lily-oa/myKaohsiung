@@ -31,8 +31,11 @@ function renderData(showData) {
 // toDoList 練習
 //需要它大範圍去做監聽
 const list = document.querySelector('.box');
-console.log(list);
-
+list.addEventListener('click', function(e){
+  if(e.target.getAttribute('class')=='view'){
+    console.log(e.target.getAttribute('value'));
+  }
+});
 
 //點擊特定範圍才會有效用，有三個可以點擊的按鈕
 
