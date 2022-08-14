@@ -32,10 +32,9 @@ function renderData(showData) {
 
 const title = document.querySelector('.title');
 
+//如果我所點擊的範圍有我要的class名稱，則取出class範圍裡面的值
 title.addEventListener('click', function(e){
-  if(e.target.nodeName !== 'INPUT'){
-    return;  //則終止程式
-  }else{
+  if(e.target.getAttribute('class')=='view'){
     console.log(e.target.getAttribute('value'));
   }
 });
