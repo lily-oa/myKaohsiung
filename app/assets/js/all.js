@@ -33,7 +33,10 @@ function renderData(showData) {
 const title = document.querySelector('.title');
 
 title.addEventListener('click', function(e){
-  console.log(e.target.textContent);               //取出文字內容
-  console.log(e.target.getAttribute('class'));  //取出屬性
-
+  if(e.target.nodeName !== 'INPUT'){
+    return;  //則終止程式
+  }else{
+    console.log(e.target.getAttribute('value'));
+  }
 });
+
