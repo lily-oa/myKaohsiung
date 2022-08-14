@@ -33,16 +33,11 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-//需要它大範圍去做監聽
+//data-屬性取值
 
 
-var list = document.querySelector('.box');
-list.addEventListener('click', function (e) {
-  //點擊特定範圍才會有效用，有三個可以點擊的按鈕
-  if (e.target.nodeName !== 'INPUT') {
-    return;
-  } else {
-    console.log(e.target.getAttribute('value'));
-  }
-});
+var title = document.querySelector('.title');
+console.log(title.getAttribute('data-content'));
+var data2 = title.getAttribute('data-num');
+console.log(data);
 //# sourceMappingURL=all.js.map
