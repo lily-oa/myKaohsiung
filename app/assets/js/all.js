@@ -15,8 +15,8 @@ function renderData(showData) {
   let selectGroup = showData.map(item => item.Zone);
   let newSelect = selectGroup.filter((item, index) => selectGroup.indexOf(item) == index);
   let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
-  newSelect.forEach(function(item){
-    let list=`<option value="${item}">${item}</option>`;
+  newSelect.forEach(function (item) {
+    let list = `<option value="${item}">${item}</option>`;
     selectStr += list;
   });
   select.innerHTML = selectStr;
@@ -28,15 +28,16 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// toDoList 練習
 //需要它大範圍去做監聽
 const list = document.querySelector('.box');
-list.addEventListener('click', function(e){
-  if(e.target.getAttribute('class')=='view'){
+list.addEventListener('click', function (e) {
+  //點擊特定範圍才會有效用，有三個可以點擊的按鈕
+  if (e.target.nodeName !== 'INPUT') {
+    return;
+  }else{
     console.log(e.target.getAttribute('value'));
   }
 });
 
-//點擊特定範圍才會有效用，有三個可以點擊的按鈕
 
 
