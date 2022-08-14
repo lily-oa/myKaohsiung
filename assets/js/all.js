@@ -38,6 +38,7 @@ function renderData(showData) {
 
 var title = document.querySelector('.title');
 console.log(title.getAttribute('data-content'));
-var data2 = title.getAttribute('data-num');
-console.log(data);
+console.log(title.getAttribute('data-num'));
+var data2 = title.getAttribute('data-content');
+console.log(data2);
 //# sourceMappingURL=all.js.map
