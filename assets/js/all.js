@@ -33,10 +33,16 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// toDoList 練習
 //需要它大範圍去做監聽
 
 
 var list = document.querySelector('.box');
-console.log(list); //點擊特定範圍才會有效用，有三個可以點擊的按鈕
+list.addEventListener('click', function (e) {
+  //點擊特定範圍才會有效用，有三個可以點擊的按鈕
+  if (e.target.nodeName !== 'INPUT') {
+    return;
+  } else {
+    console.log(e.target.getAttribute('value'));
+  }
+});
 //# sourceMappingURL=all.js.map
