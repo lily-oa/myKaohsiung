@@ -29,13 +29,11 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // toDoList 練習
+//需要它大範圍去做監聽
+const list = document.querySelector('.box');
+console.log(list);
 
-const title = document.querySelector('.title');
 
-//如果我所點擊的範圍有我要的class名稱，則取出class範圍裡面的值
-title.addEventListener('click', function(e){
-  if(e.target.getAttribute('class')=='view'){
-    console.log(e.target.getAttribute('value'));
-  }
-});
+//點擊特定範圍才會有效用，有三個可以點擊的按鈕
+
 
