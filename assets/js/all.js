@@ -34,4 +34,12 @@ function renderData(showData) {
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // toDoList 練習
+
+
+var title = document.querySelector('.title');
+title.addEventListener('click', function (e) {
+  console.log(e.target.textContent); //取出文字內容
+
+  console.log(e.target.getAttribute('class')); //取出屬性
+});
 //# sourceMappingURL=all.js.map
