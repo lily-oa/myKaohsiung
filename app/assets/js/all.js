@@ -28,16 +28,9 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-//需要它大範圍去做監聽
-const list = document.querySelector('.box');
-list.addEventListener('click', function (e) {
-  //點擊特定範圍才會有效用，有三個可以點擊的按鈕
-  if (e.target.nodeName !== 'INPUT') {
-    return;
-  }else{
-    console.log(e.target.getAttribute('value'));
-  }
-});
+//data-屬性取值
+const title = document.querySelector('.title');
+console.log(title.getAttribute('data-content'));
 
-
-
+let data2 = title.getAttribute('data-num');
+console.log(data);
