@@ -39,14 +39,17 @@ let myData = [
 ]
 
 //寫一個函式把裡面的處理方式都包起來
-let str = '';
-myData.forEach(function(item){
-  str+=`
+function myRenderData() {
+  let str = '';
+  myData.forEach(function (item) {
+    str += `
   <li class="mb-2">${item.content}<input type="button" value="刪除代辦" class="delete ms-2"></li>
   `
-});
+  });
 
-console.log(str);
+  const list = document.querySelector('.list');
+  list.innerHTML = str;
+}
 
-const list = document.querySelector('.list');
-list.innerHTML = str;
+// 一開始預設時會先跑一次
+myRenderData();
