@@ -31,25 +31,19 @@ function renderData(showData) {
 // 實作 toDoList 練習
 let myData = [
   {
-    "content":"待辦事項一" 
+    "content":"·待辦事項一" 
   },
   {
-    "content":"今天記得刷牙"
+    "content":"·今天記得刷牙"
   }
 ]
 
 //寫一個函式把裡面的處理方式都包起來
-function myRenderData() {
-  let str = '';
-  myData.forEach(function (item) {
-    str += `
-  <li class="mb-2">${item.content}<input type="button" value="刪除代辦" class="delete ms-2"></li>
+let str = '';
+myData.forEach(function(item){
+  str += `
+  <li class="ms-2">${item.content}<input type="button" value="刪除代辨" class="m-2"></li>
   `
-  });
-
-  const list = document.querySelector('.list');
-  list.innerHTML = str;
-}
-
-// 一開始預設時會先跑一次
-myRenderData();
+});
+const list = document.querySelector('.list');
+list.innerHTML = str;
