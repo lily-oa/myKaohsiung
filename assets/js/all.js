@@ -34,4 +34,19 @@ function renderData(showData) {
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 實作 toDoList 練習
+
+
+var myData = [{
+  "content": "待辦事項一"
+}, {
+  "content": "今天記得刷牙"
+}]; //寫一個函式把裡面的處理方式都包起來
+
+var str = '';
+myData.forEach(function (item) {
+  str += "\n  <li class=\"mb-2\">".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\u4EE3\u8FA6\" class=\"delete ms-2\"></li>\n  ");
+});
+console.log(str);
+var list = document.querySelector('.list');
+list.innerHTML = str;
 //# sourceMappingURL=all.js.map
