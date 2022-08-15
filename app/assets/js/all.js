@@ -28,10 +28,4 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-//data-屬性取值
-const title = document.querySelector('.title');
-console.log(title.getAttribute('data-content'));
-console.log(title.getAttribute('data-num'));
-
-let data2 = title.getAttribute('data-content');
-console.log(data2);
+// 實作 toDoList 練習
