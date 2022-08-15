@@ -33,12 +33,5 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-//data-屬性取值
-
-
-var title = document.querySelector('.title');
-console.log(title.getAttribute('data-content'));
-console.log(title.getAttribute('data-num'));
-var data2 = title.getAttribute('data-content');
-console.log(data2);
+// 實作 toDoList 練習
 //# sourceMappingURL=all.js.map
