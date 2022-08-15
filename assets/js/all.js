@@ -37,20 +37,15 @@ function renderData(showData) {
 
 
 var myData = [{
-  "content": "待辦事項一"
+  "content": "·待辦事項一"
 }, {
-  "content": "今天記得刷牙"
+  "content": "·今天記得刷牙"
 }]; //寫一個函式把裡面的處理方式都包起來
 
-function myRenderData() {
-  var str = '';
-  myData.forEach(function (item) {
-    str += "\n  <li class=\"mb-2\">".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\u4EE3\u8FA6\" class=\"delete ms-2\"></li>\n  ");
-  });
-  var list = document.querySelector('.list');
-  list.innerHTML = str;
-} // 一開始預設時會先跑一次
-
-
-myRenderData();
+var str = '';
+myData.forEach(function (item) {
+  str += "\n  <li class=\"ms-2\">".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\u4EE3\u8FA8\" class=\"m-2\"></li>\n  ");
+});
+var list = document.querySelector('.list');
+list.innerHTML = str;
 //# sourceMappingURL=all.js.map
