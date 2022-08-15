@@ -35,15 +35,22 @@ let myData = [
   },
   {
     "content":"·今天記得刷牙"
+  },
+  {
+    "content":"·記得去吃飯"
   }
 ]
 
 //寫一個函式把裡面的處理方式都包起來
-let str = '';
-myData.forEach(function(item){
-  str += `
-  <li class="ms-2">${item.content}<input type="button" value="刪除代辨" class="m-2"></li>
-  `
-});
-const list = document.querySelector('.list');
-list.innerHTML = str;
+function myRenderData(){
+  let str = '';
+  myData.forEach(function(item){
+    str += `
+    <li class="ms-2">${item.content}<input type="button" value="刪除代辨" class="m-2"></li>
+    `
+  });
+  const list = document.querySelector('.list');
+  list.innerHTML = str;
+}
+
+myRenderData();
