@@ -1,5 +1,5 @@
-.bg{
-  background: url('../images/Hero.png');  //不能用 bgi
+.bg {
+  background: url('../images/Hero.png'); //不能用 bgi
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,27 +10,28 @@
   justify-content: center;
   align-items: center;
 
-  
+
   margin-bottom: 121px;
-  @include media-breakpoint-up(md){
+
+  @include media-breakpoint-up(md) {
     position: relative;
   }
 }
 
-.logo{
+.logo {
   margin: 250px 0 40px 0;
 
   @include media-breakpoint-up(md) {
     margin: 89px 0 96px 0;
   }
 
-  a{
+  a {
     display: block;
     color: #fff;
   }
 }
 
-.select-group{
+.select-group {
   background: rgba(255, 255, 255, 0.7);
   border: 3px solid #fff;
   border-radius: 3px;
@@ -46,11 +47,12 @@
   }
 }
 
-.tabs-group{
+.tabs-group {
+
   // padding-bottom: 100px;
   @include media-breakpoint-up(md) {
     position: absolute;
-    bottom: -100px;   //區塊往下
+    bottom: -100px; //區塊往下
   }
 
   width: 78%;
@@ -64,40 +66,40 @@
   }
 }
 
-.tabs-list{
+.tabs-list {
   display: inline-flex;
-  gap: 12px;   //网格行与列之间的间隙
+  gap: 12px; //网格行与列之间的间隙
 
 
-  li{
+  li {
     white-space: nowrap; //文字以橫向顯示
 
-    &:nth-child(1) a{
+    &:nth-child(1) a {
       background-color: $secondary;
     }
 
-    &:nth-child(2) a{
+    &:nth-child(2) a {
       background-color: $third;
     }
 
-    &:nth-child(3) a{
+    &:nth-child(3) a {
       background-color: $four;
     }
 
-    &:nth-child(4) a{
+    &:nth-child(4) a {
       background-color: $primary;
     }
   }
 
-  a{
+  a {
     display: block;
     padding: 12px 34px;
-    font-size: $h4-font-size;  //20px
+    font-size: $h4-font-size; //20px
     color: #fff;
   }
 }
 
-.hr{
+.hr {
   width: 88%;
   margin: 0 auto;
   border-bottom: 1px dashed $primary;
@@ -105,8 +107,9 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  padding-top: 100px;  //虛線往下
-  a{
+  padding-top: 100px; //虛線往下
+
+  a {
     display: flex;
     position: absolute;
     color: $primary;
@@ -114,16 +117,17 @@
     background-color: #fff;
   }
 
-  @include media-breakpoint-up(md){
+  @include media-breakpoint-up(md) {
     position: relative;
     justify-content: center;
     align-items: center;
     padding-top: 0;
-    a{
+
+    a {
       display: flex;
       position: absolute;
       color: $primary;
-      font-size: $h3-font-size;  //24px
+      font-size: $h3-font-size; //24px
       background-color: #fff;
     }
   }
@@ -131,17 +135,17 @@
 
 //-----------------卡片區-----------------
 
-.container{
+.container {
   padding: 65px 39px 40px 40px;
 }
 
-.subtitle{
+.subtitle {
   color: $secondary;
   text-align: center;
   margin-bottom: 24px;
 }
 
-.card-list{
+.card-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -149,7 +153,7 @@
   gap: 4%;
 }
 
-.card{
+.card {
   margin-bottom: 36px;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
@@ -157,15 +161,17 @@
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
-  @include media-breakpoint-up(md){
-    width: 45.3%;  
+
+  @include media-breakpoint-up(md) {
+    width: 45.3%;
   }
+
   @include media-breakpoint-up(lg) {
     width: 30.3%;
   }
 }
 
-.card-header{
+.card-header {
   padding: 0;
   height: 137px;
   background-position: center;
@@ -175,22 +181,24 @@
   flex-direction: column;
 }
 
-.card-title{
+.card-title {
   padding: 0 22px 14px 22px;
   flex-grow: 1;
   display: flex;
   justify-content: space-between;
   align-items: end;
   gap: 0.5rem;
-  h4{
+
+  h4 {
     font-size: $h3-font-size; //24px
   }
-  p{
+
+  p {
     white-space: nowrap;
   }
 }
 
-.card-body{
+.card-body {
   padding: 15px 24px 19px 24px;
   flex-grow: 1;
 
@@ -198,23 +206,25 @@
   flex-direction: column;
   justify-content: center;
 
-  li{
+  li {
     display: flex;
     align-items: center;
-    
-    &:not(last-child){
+
+    &:not(last-child) {
       margin-bottom: 14px;
     }
-    &:nth-child(1) i{
+
+    &:nth-child(1) i {
       color: $secondary;
     }
-    &:nth-child(2) i{
+
+    &:nth-child(2) i {
       color: $third;
     }
 
-    i{
+    i {
       margin-right: 10px;
-      font-size: $h6-font-size;  //18px
+      font-size: $h6-font-size; //18px
       text-align: center;
       width: 18px;
       height: 18px;
@@ -222,31 +232,32 @@
   }
 }
 
-.card-footer-list{
+.card-footer-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
 
-  div{
+  div {
     display: flex;
     align-items: center;
   }
 
-  & div:nth-child(1){
+  & div:nth-child(1) {
     color: $primary;
     margin-bottom: 5px;
   }
 
-  & div:nth-child(2){
+  & div:nth-child(2) {
     color: $four;
   }
 
 }
 
 .card-footer-item {
-  &[data-display*="d-none"]{   //為何要用這樣的寫法
+  &[data-display*="d-none"] {
+    //為何要用這樣的寫法
     display: none;
   }
 }
@@ -254,32 +265,32 @@
 //----------------------------分頁設定----------------
 //若不是最後一個子節點都需設定邊距向右 8px
 .page-item {
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-right: 8px;
   }
 }
 
 .page-link {
   display: block;
-  font-size: $h7-font-size;  //14px
+  font-size: $h7-font-size; //14px
   color: #4a4a4a;
   line-height: 17px;
   padding: auto 5px;
-  border: none;   //無邊框
+  border: none; //無邊框
 
-  &:disabled{
-    pointer-events: none;  //滑鼠穿越該元素，點擊到下方的元素
+  &:disabled {
+    pointer-events: none; //滑鼠穿越該元素，點擊到下方的元素
   }
 
-  &[data-type="page"]{
-    font-size: $h7-font-size;  //14px
+  &[data-type="page"] {
+    font-size: $h7-font-size; //14px
     color: rgba(74, 74, 74, 0.50);
     pointer-events: none;
   }
 
-  &.active{
-    &[data-type="page"]{
-      font-size: $h7-font-size;  //14px
+  &.active {
+    &[data-type="page"] {
+      font-size: $h7-font-size; //14px
       color: #4a4a4a;
       pointer-events: auto; //被另外一個div遮住，就無法進行點擊或 hover 的動作
     }
@@ -287,30 +298,31 @@
 }
 
 //------------頁尾---------------------------
-.footer{
+.footer {
   background-color: $primary;
   padding: 24px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-size: $h7-font-size;  //14px
-  
-  p{
+  font-size: $h7-font-size; //14px
+
+  p {
     color: #ffd366;
   }
 
-  & p:first-child{
+  & p:first-child {
     margin-bottom: 15px;
   }
-  a{
+
+  a {
     color: #fff;
   }
 }
 
 
 //axios-串接外部資料的練習-------------------------------------------------
-.test{
+.test {
   height: 300px;
   width: 500px;
 }
