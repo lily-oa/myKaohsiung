@@ -48,9 +48,12 @@ var save = document.querySelector('.save');
 save.addEventListener('click', function (e) {
   if (txt.value == '') {
     alert('請輸入內容');
+    return;
   }
 
-  console.log('你有點到了!');
+  var myObj = {};
+  myObj.content = txt.value;
+  console.log(myObj);
 }); //寫一個函式把裡面的處理方式都包起來
 
 function myRenderData() {
