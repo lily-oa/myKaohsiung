@@ -47,13 +47,17 @@ var txt = document.querySelector('.txt');
 var save = document.querySelector('.save');
 save.addEventListener('click', function (e) {
   if (txt.value == '') {
-    alert('請輸入內容');
+    alert('請輸內容');
     return;
-  }
+  } // {
+  //   "content": "·記得去吃飯"
+  // }
 
-  var myObj = {};
-  myObj.content = txt.value;
-  console.log(myObj);
+
+  var myItem = {};
+  myItem.content = txt.value;
+  myData.push(myItem);
+  console.log(myData);
 }); //寫一個函式把裡面的處理方式都包起來
 
 function myRenderData() {
