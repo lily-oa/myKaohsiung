@@ -46,6 +46,7 @@ const save = document.querySelector('.save');
 save.addEventListener('click', function (e) {
   if (txt.value == '') {
     alert('請輸入內容');
+    return;
   }
   console.log('你有點到了!');
 });
