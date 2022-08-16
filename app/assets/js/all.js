@@ -28,16 +28,7 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 實作 toDoList 練習
-let myData = [{
-    "content": "·待辦事項一"
-  },
-  {
-    "content": "·今天記得刷牙"
-  },
-  {
-    "content": "·記得去吃飯"
-  }
-]
+let myData = [];
 
 const txt = document.querySelector('.txt');
 const save = document.querySelector('.save');
@@ -61,7 +52,7 @@ function myRenderData() {
   let str = '';
   myData.forEach(function (item) {
     str += `
-  <li class="ms-2">${item.content}<input type="button" value="刪除代辨" class="m-2"></li>
+  <li class="ms-2">·${item.content}<input type="button" value="刪除代辨" class="m-2"></li>
   `
   });
   const list = document.querySelector('.list');
