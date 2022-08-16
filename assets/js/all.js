@@ -42,7 +42,16 @@ var myData = [{
   "content": "·今天記得刷牙"
 }, {
   "content": "·記得去吃飯"
-}]; //寫一個函式把裡面的處理方式都包起來
+}];
+var txt = document.querySelector('.txt');
+var save = document.querySelector('.save');
+save.addEventListener('click', function (e) {
+  if (txt.value == '') {
+    alert('請輸入內容');
+  }
+
+  console.log('你有點到了!');
+}); //寫一個函式把裡面的處理方式都包起來
 
 function myRenderData() {
   var str = '';
@@ -52,6 +61,4 @@ function myRenderData() {
   var list = document.querySelector('.list');
   list.innerHTML = str;
 }
-
-myRenderData();
 //# sourceMappingURL=all.js.map
