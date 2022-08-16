@@ -58,5 +58,3 @@ function myRenderData() {
   const list = document.querySelector('.list');
   list.innerHTML = str;
 }
-
-myRenderData();
