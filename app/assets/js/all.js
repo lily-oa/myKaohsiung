@@ -44,6 +44,9 @@ let myData = [{
 const txt = document.querySelector('.txt');
 const save = document.querySelector('.save');
 save.addEventListener('click', function (e) {
+  if(txt.value == ''){
+    alert('請輸入內容');
+  }
   console.log('你有點到了!');
 });
 
