@@ -53,7 +53,7 @@ save.addEventListener('click', function (e) {
   let myItem = {};
   myItem.content = txt.value;
   myData.push(myItem);
-  console.log(myData);
+  myRenderData();
 });
 
 //寫一個函式把裡面的處理方式都包起來
