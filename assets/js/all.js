@@ -36,13 +36,7 @@ function renderData(showData) {
 // 實作 toDoList 練習
 
 
-var myData = [{
-  "content": "·待辦事項一"
-}, {
-  "content": "·今天記得刷牙"
-}, {
-  "content": "·記得去吃飯"
-}];
+var myData = [];
 var txt = document.querySelector('.txt');
 var save = document.querySelector('.save');
 save.addEventListener('click', function (e) {
@@ -63,7 +57,7 @@ save.addEventListener('click', function (e) {
 function myRenderData() {
   var str = '';
   myData.forEach(function (item) {
-    str += "\n  <li class=\"ms-2\">".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\u4EE3\u8FA8\" class=\"m-2\"></li>\n  ");
+    str += "\n  <li class=\"ms-2\">\xB7".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\u4EE3\u8FA8\" class=\"m-2\"></li>\n  ");
   });
   var list = document.querySelector('.list');
   list.innerHTML = str;
