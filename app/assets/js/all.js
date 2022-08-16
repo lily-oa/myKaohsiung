@@ -39,6 +39,14 @@ let myData = [{
   }
 ]
 
+
+
+const txt = document.querySelector('.txt');
+const save = document.querySelector('.save');
+save.addEventListener('click', function (e) {
+  console.log('你有點到了!');
+});
+
 //寫一個函式把裡面的處理方式都包起來
 function myRenderData() {
   let str = '';
