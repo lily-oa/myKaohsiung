@@ -40,17 +40,9 @@ var myData = [];
 var txt = document.querySelector('.txt');
 var save = document.querySelector('.save');
 save.addEventListener('click', function (e) {
-  if (txt.value == '') {
-    alert('請輸內容');
-    return;
-  } // {
-  //   "content": "·記得去吃飯"
-  // }
-
-
-  var myItem = {};
-  myItem.content = txt.value;
-  myData.push(myItem);
+  var myObj = {};
+  myObj.content = txt.value;
+  myData.push(myObj);
   myRenderData();
 }); //寫一個函式把裡面的處理方式都包起來
 
