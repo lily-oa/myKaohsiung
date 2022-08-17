@@ -40,11 +40,11 @@ save.addEventListener('click', function(e){
   
 });
 //寫一個函式把裡面的處理方式都包起來
-function myRenderData() {
+function myRenderData() {  
   let str = '';
-  myData.forEach(function (item) {
+  myData.forEach(function (item, index) {
     str += `
-  <li class="ms-2">·${item.content}<input type="button" value="刪除代辨" class="m-2"></li>
+  <li class="ms-2">·${item.content}<input type="button" value="刪除代辨" data-num="${index}" class="m-2"></li>
   `
   });
   const list = document.querySelector('.list');
