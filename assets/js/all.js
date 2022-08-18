@@ -39,20 +39,37 @@ function renderData(showData) {
 var myData = [];
 var txt = document.querySelector('.txt');
 var save = document.querySelector('.save');
+var list = document.querySelector('.list'); //寫一個函式把裡面的處理方式都包起來
+// 狀態初始化用的
+
+function myRenderData() {
+  var str = '';
+  myData.forEach(function (item, index) {
+    str += "\n  <li class=\"ms-2\">\xB7".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\u4EE3\u8FA8\" data-num=\"").concat(index, "\" class=\"delete m-2\"></li>\n  ");
+  });
+  var list = document.querySelector('.list');
+  list.innerHTML = str;
+  txt.value = '';
+} //新增代辦功能
+
+
 save.addEventListener('click', function (e) {
   var myObj = {};
   myObj.content = txt.value;
   myData.push(myObj);
   myRenderData();
-}); //寫一個函式把裡面的處理方式都包起來
+}); // 刪除代辦功能
 
-function myRenderData() {
-  var str = '';
-  myData.forEach(function (item, index) {
-    str += "\n  <li class=\"ms-2\">\xB7".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\u4EE3\u8FA8\" data-num=\"").concat(index, "\" class=\"m-2\"></li>\n  ");
-  });
-  var list = document.querySelector('.list');
-  list.innerHTML = str;
-  txt.value = '';
-}
+list.addEventListener('click', function (e) {
+  if (e.target.getAttribute('class') !== 'delete m-2') {
+    alert('你目前不是點擊到按鈕');
+    return;
+  }
+
+  var num = e.target.getAttribute('data-num');
+  console.log(num);
+  myData.splice(num, 1); // 刪除
+
+  myRenderData(); //重新跑一次，重新跑forEach，是為了要讓資料可以同步
+});
 //# sourceMappingURL=all.js.map
