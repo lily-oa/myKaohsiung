@@ -29,17 +29,15 @@ function renderData(showData) {
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 實作 toDoList 練習
 let myData = [];
-
 const txt = document.querySelector('.txt');
 const save = document.querySelector('.save');
 save.addEventListener('click', function(e){
   let myObj = {};
   myObj.content = txt.value;
   myData.push(myObj);
-  console.log(myObj);
   myRenderData();
-  
 });
+
 //寫一個函式把裡面的處理方式都包起來
 function myRenderData() {  
   let str = '';
@@ -50,4 +48,5 @@ function myRenderData() {
   });
   const list = document.querySelector('.list');
   list.innerHTML = str;
-}
+  txt.value = '';
+} 
