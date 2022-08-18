@@ -31,6 +31,12 @@ function renderData(showData) {
 let myData = [];
 const txt = document.querySelector('.txt');
 const save = document.querySelector('.save');
+const list = document.querySelector('.list');
+list.addEventListener('click', function(e){
+  
+});
+
+
 save.addEventListener('click', function(e){
   let myObj = {};
   myObj.content = txt.value;
