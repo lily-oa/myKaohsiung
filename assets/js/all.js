@@ -53,5 +53,6 @@ function myRenderData() {
   });
   var list = document.querySelector('.list');
   list.innerHTML = str;
+  txt.value = '';
 }
 //# sourceMappingURL=all.js.map
