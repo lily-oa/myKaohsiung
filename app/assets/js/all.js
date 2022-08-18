@@ -36,6 +36,7 @@ save.addEventListener('click', function(e){
   let myObj = {};
   myObj.content = txt.value;
   myData.push(myObj);
+  console.log(myObj);
   myRenderData();
   
 });
