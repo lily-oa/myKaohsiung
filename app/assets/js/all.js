@@ -32,27 +32,37 @@ let myData = [];
 const txt = document.querySelector('.txt');
 const save = document.querySelector('.save');
 const list = document.querySelector('.list');
-list.addEventListener('click', function(e){
-  
-});
 
+//寫一個函式把裡面的處理方式都包起來
+// 狀態初始化用的
+function myRenderData() {
+  let str = '';
+  myData.forEach(function (item, index) {
+    str += `
+  <li class="ms-2">·${item.content}<input type="button" value="刪除代辨" data-num="${index}" class="delete m-2"></li>
+  `
+  });
+  const list = document.querySelector('.list');
+  list.innerHTML = str;
+  txt.value = '';
+}
 
-save.addEventListener('click', function(e){
+//新增代辦功能
+save.addEventListener('click', function (e) {
   let myObj = {};
   myObj.content = txt.value;
   myData.push(myObj);
   myRenderData();
 });
 
-//寫一個函式把裡面的處理方式都包起來
-function myRenderData() {  
-  let str = '';
-  myData.forEach(function (item, index) {
-    str += `
-  <li class="ms-2">·${item.content}<input type="button" value="刪除代辨" data-num="${index}" class="m-2"></li>
-  `
-  });
-  const list = document.querySelector('.list');
-  list.innerHTML = str;
-  txt.value = '';
-} 
+// 刪除代辦功能
+list.addEventListener('click', function (e) {
+  if(e.target.getAttribute('class')!=='delete m-2'){
+    alert('你目前不是點擊到按鈕');
+    return;
+  }
+  let num = e.target.getAttribute('data-num');
+  console.log(num);
+  myData.splice(num, 1);  // 刪除
+  myRenderData();   //重新跑一次，重新跑forEach，是為了要讓資料可以同步
+});
