@@ -49,7 +49,7 @@ function myRenderData() {
   });
   var list = document.querySelector('.list');
   list.innerHTML = str;
-  txt.value = '';
+  txt.value = ''; //按 " 儲存代辦 " 後會回到空值的狀態
 } //新增代辦功能
 
 
@@ -62,14 +62,14 @@ save.addEventListener('click', function (e) {
 
 list.addEventListener('click', function (e) {
   if (e.target.getAttribute('class') !== 'delete m-2') {
-    alert('你目前不是點擊到按鈕');
+    alert('你點到其它地方了喔!!');
     return;
   }
 
-  var num = e.target.getAttribute('data-num');
-  console.log(num);
-  myData.splice(num, 1); // 刪除
+  var num = e.target.getAttribute('data-num'); //將索引值取出
 
-  myRenderData(); //重新跑一次，重新跑forEach，是為了要讓資料可以同步
+  myData.splice(num, 1); //刪除資料
+
+  myRenderData(); //再次將資料給顯示出來
 });
 //# sourceMappingURL=all.js.map
