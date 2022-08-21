@@ -37,3 +37,10 @@ const newArr = arr.map(function(item){
 });
 console.log(newArr);
 console.log(arr);
+
+const thirdData = [1, 8, 13, 20];
+const newData = thirdData.map(function(item){
+  return item > 10;
+});
+
+console.log(newData);
