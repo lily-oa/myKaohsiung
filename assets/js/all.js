@@ -40,28 +40,26 @@ function renderData(showData) {
 // find 找其中第一筆有符合的就好，其它就不再尋找了
 
 
-var arr = [1, 5, 10, 20, 30, 40];
+var arr = [1, 2, 3, 5, 10, 20, 30, 40];
 var newArr = arr.find(function (item) {
+  console.log(item);
   return item >= 5;
 }); //[5, 10]
 
 console.log(newArr); // 分數
-// const scoreData = [
-//   {
-//     name: '小明',
-//     score: 88
-//   },
-//   {
-//     name: '小英',
-//     score: 62
-//   }, 
-//   {
-//     name: '小花',
-//     score: 53
-//   }, 
-// ]
-// const filterScoreData = scoreData.filter(function(item){
-//   return item.score >= 60;
-// });
-// console.log(filterScoreData);
+
+var scoreData = [{
+  name: '小明',
+  score: 88
+}, {
+  name: '小英',
+  score: 62
+}, {
+  name: '小花',
+  score: 53
+}];
+var filterScoreData = scoreData.find(function (item) {
+  return item.score >= 60;
+});
+console.log(filterScoreData);
 //# sourceMappingURL=all.js.map
