@@ -38,12 +38,6 @@ function renderData(showData) {
 // 2.不會影響到原陣列
 
 
-var arr = [1, 5, 10];
-var newArr = arr.map(function (item) {
-  return item * item;
-}); // console.log(newArr);
-// console.log(arr);
-
 var thirdData = [1, 8, 13, 20]; //原陣列
 
 var newData = thirdData.map(function (item) {
@@ -53,4 +47,5 @@ var newData = thirdData.map(function (item) {
   return myObj;
 });
 console.log(thirdData);
+console.log(newData);
 //# sourceMappingURL=all.js.map
