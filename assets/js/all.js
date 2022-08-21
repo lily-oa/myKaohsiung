@@ -33,47 +33,15 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// 實作 toDoList 練習
+// 陣列操作 map
+// 1.能將原始陣列運算後，重新組合回傳一個新陣列
+// 2.不會影響到原陣列
 
 
-var myData = [];
-var txt = document.querySelector('.txt');
-var save = document.querySelector('.save');
-var list = document.querySelector('.list'); // 寫一個函式把裡面的處理方式都包起來
-// 狀態初始化用的
-
-function myRenderData() {
-  var str = '';
-  myData.forEach(function (item, index) {
-    str += "\n    <li class=\"m-2 fs-4\">\xB7".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\" data-num=\"").concat(index, "\" class=\"delete m-2\"></li>\n    ");
-  });
-  var list = document.querySelector('.list');
-  list.innerHTML = str;
-  txt.value = '';
-} // myRender();
-//新增代辦功能
-
-
-save.addEventListener('click', function (e) {
-  if (txt.value == '') {
-    alert('此欄位不可為空');
-    return;
-  }
-
-  var myObj = {};
-  myObj.content = txt.value;
-  myData.push(myObj);
-  myRenderData();
-}); // 刪除代辦功能
-
-list.addEventListener('click', function (e) {
-  if (e.target.getAttribute('class') !== 'delete m-2') {
-    alert('你沒有點到正確的按鈕');
-    return;
-  }
-
-  var num = e.target.getAttribute('data-num');
-  myData.splice(num, 1);
-  myRenderData();
+var arr = [1, 5, 10];
+var newArr = arr.map(function (item) {
+  return item * item;
 });
+console.log(newArr);
+console.log(arr);
 //# sourceMappingURL=all.js.map
