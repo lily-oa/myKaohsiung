@@ -33,22 +33,27 @@ const txt = document.querySelector('.txt');
 const save = document.querySelector('.save');
 const list = document.querySelector('.list');
 
-//寫一個函式把裡面的處理方式都包起來
+// 寫一個函式把裡面的處理方式都包起來
 // 狀態初始化用的
-function myRenderData() {
+function myRenderData(){
   let str = '';
-  myData.forEach(function (item, index) {
+  myData.forEach(function(item, index){
     str += `
-  <li class="ms-2">·${item.content}<input type="button" value="刪除代辨" data-num="${index}" class="delete m-2"></li>
-  `
+    <li class="m-2 fs-4">·${item.content}<input type="button" value="刪除" data-num="${index}" class="delete m-2"></li>
+    `
   });
   const list = document.querySelector('.list');
   list.innerHTML = str;
-  txt.value = '';          //按 " 儲存代辦 " 後會回到空值的狀態
+  txt.value = '';
 }
 
+// myRender();
 //新增代辦功能
-save.addEventListener('click', function (e) {
+save.addEventListener('click',function(e){
+  if(txt.value ==''){
+    alert('此欄位不可為空');
+    return;
+  }
   let myObj = {};
   myObj.content = txt.value;
   myData.push(myObj);
@@ -57,11 +62,11 @@ save.addEventListener('click', function (e) {
 
 // 刪除代辦功能
 list.addEventListener('click', function(e){
-  if(e.target.getAttribute('class') !== 'delete m-2'){
-    alert('你點到其它地方了喔!!');
+  if(e.target.getAttribute('class')!=='delete m-2'){
+    alert('你沒有點到正確的按鈕');
     return;
   }
-  let num = e.target.getAttribute('data-num');   //將索引值取出
-  myData.splice(num, 1);                         //刪除資料
-  myRenderData();                                //再次將資料給顯示出來
+  let num = e.target.getAttribute('data-num');
+  myData.splice(num, 1);
+  myRenderData();
 });
