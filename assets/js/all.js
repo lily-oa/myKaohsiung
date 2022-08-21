@@ -41,12 +41,16 @@ function renderData(showData) {
 var arr = [1, 5, 10];
 var newArr = arr.map(function (item) {
   return item * item;
-});
-console.log(newArr);
-console.log(arr);
-var thirdData = [1, 8, 13, 20];
+}); // console.log(newArr);
+// console.log(arr);
+
+var thirdData = [1, 8, 13, 20]; //原陣列
+
 var newData = thirdData.map(function (item) {
-  return item > 10;
+  //新陣列
+  var myObj = {};
+  myObj.checkNum = item > 10;
+  return myObj;
 });
-console.log(newData);
+console.log(thirdData);
 //# sourceMappingURL=all.js.map
