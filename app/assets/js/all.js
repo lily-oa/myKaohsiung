@@ -32,31 +32,32 @@ function renderData(showData) {
 // 2.不會影響到原陣列
 // 比價網、下拉選擇市區、有誰有及格
 // find 找其中第一筆有符合的就好，其它就不再尋找了
-const arr = [1, 5, 10, 20, 30, 40];
+const arr = [1, 2, 3, 5, 10, 20, 30, 40];
 const newArr = arr.find(function(item){
+  console.log(item);
   return item >= 5;
 });
   //[5, 10]
 console.log(newArr);
 
 // 分數
-// const scoreData = [
-//   {
-//     name: '小明',
-//     score: 88
-//   },
-//   {
-//     name: '小英',
-//     score: 62
-//   }, 
-//   {
-//     name: '小花',
-//     score: 53
-//   }, 
-// ]
+const scoreData = [
+  {
+    name: '小明',
+    score: 88
+  },
+  {
+    name: '小英',
+    score: 62
+  }, 
+  {
+    name: '小花',
+    score: 53
+  }, 
+]
 
-// const filterScoreData = scoreData.filter(function(item){
-//   return item.score >= 60;
-// });
+const filterScoreData = scoreData.find(function(item){
+  return item.score >= 60;
+});
 
-// console.log(filterScoreData);
+console.log(filterScoreData);
