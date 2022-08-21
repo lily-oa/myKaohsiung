@@ -33,19 +33,7 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// 陣列操作 map
-// 1.能將原始陣列運算後，重新組合回傳一個新陣列
+// JS array filter 篩選
+// 1.篩選出符合條件的內容，組合後回傳新陣列。
 // 2.不會影響到原陣列
-
-
-var thirdData = [1, 8, 13, 20]; //原陣列
-
-var newData = thirdData.map(function (item) {
-  //新陣列
-  var myObj = {};
-  myObj.checkNum = item > 10;
-  return myObj;
-});
-console.log(thirdData);
-console.log(newData);
 //# sourceMappingURL=all.js.map
