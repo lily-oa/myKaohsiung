@@ -44,4 +44,9 @@ var newArr = arr.map(function (item) {
 });
 console.log(newArr);
 console.log(arr);
+var thirdData = [1, 8, 13, 20];
+var newData = thirdData.map(function (item) {
+  return item > 10;
+});
+console.log(newData);
 //# sourceMappingURL=all.js.map
