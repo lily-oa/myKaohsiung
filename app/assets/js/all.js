@@ -31,17 +31,11 @@ function renderData(showData) {
 // 1.能將原始陣列運算後，重新組合回傳一個新陣列
 // 2.不會影響到原陣列
 
-const arr = [1, 5, 10];
-const newArr = arr.map(function(item){
-  return item*item;
-});
-// console.log(newArr);
-// console.log(arr);
-
 const thirdData = [1, 8, 13, 20];                    //原陣列
 const newData = thirdData.map(function(item){        //新陣列
-  let myObj = {};
+  let myObj = {}; 
   myObj.checkNum = item > 10;
   return myObj;
 });
 console.log(thirdData);
+console.log(newData);
