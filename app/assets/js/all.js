@@ -35,12 +35,13 @@ const arr = [1, 5, 10];
 const newArr = arr.map(function(item){
   return item*item;
 });
-console.log(newArr);
-console.log(arr);
+// console.log(newArr);
+// console.log(arr);
 
-const thirdData = [1, 8, 13, 20];
-const newData = thirdData.map(function(item){
-  return item > 10;
+const thirdData = [1, 8, 13, 20];                    //原陣列
+const newData = thirdData.map(function(item){        //新陣列
+  let myObj = {};
+  myObj.checkNum = item > 10;
+  return myObj;
 });
-
-console.log(newData);
+console.log(thirdData);
