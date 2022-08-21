@@ -30,5 +30,33 @@ function renderData(showData) {
 // JS array filter 篩選
 // 1.篩選出符合條件的內容，組合後回傳新陣列。
 // 2.不會影響到原陣列
+// 比價網、下拉選擇市區、有誰有及格
 
+const arr = [1, 5, 10];
+const newArr = arr.filter(function(item){
+  return item >= 5;
+});
+  //[5, 10]
+console.log(newArr);
 
+// 分數
+const scoreData = [
+  {
+    name: '小明',
+    score: 88
+  },
+  {
+    name: '小英',
+    score: 62
+  }, 
+  {
+    name: '小花',
+    score: 53
+  }
+]
+
+const filterScore = scoreData.filter(function(item){
+  return item.score >= 60;
+});
+
+console.log(filterScore);
