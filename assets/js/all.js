@@ -33,33 +33,30 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// JS array filter、find 篩選
-// 1.篩選出符合條件的內容，組合後回傳新陣列。
-// 2.不會影響到原陣列
-// 比價網、下拉選擇市區、有誰有及格
-// find 找其中第一筆有符合的就好，其它就不再尋找了
+// find 值提取出來 
+// findIndex 索引 編號第幾筆資料
 
 
-var arr = [1, 2, 3, 5, 10, 20, 30, 40];
-var newArr = arr.find(function (item) {
-  console.log(item);
-  return item >= 5;
-}); //[5, 10]
-
-console.log(newArr); // 分數
-
-var scoreData = [{
-  name: '小明',
-  score: 88
-}, {
-  name: '小英',
-  score: 62
-}, {
-  name: '小花',
-  score: 53
-}];
-var filterScoreData = scoreData.find(function (item) {
-  return item.score >= 60;
+var colors = ['red', 'blue', 'black'];
+var blueIndex = colors.findIndex(function (item) {
+  return item == 'red';
 });
-console.log(filterScoreData);
+console.log(blueIndex); // 訂單編號
+
+var orders = [{
+  name: '小廖',
+  orderId: '12384955'
+}, {
+  name: '小華',
+  orderId: '12384945'
+}, {
+  name: '小美',
+  orderId: '1231495'
+}]; // 需要知道小華訂單的索引值是多少？
+
+var huaId = orders.findIndex(function (item) {
+  return item.orderId == '12384945';
+});
+console.log(huaId);
+console.log("\u9019\u500B\u8A02\u55AE\u7DE8\u865F\u7684\u4E3B\u4EBA\u662F".concat(orders[huaId].name));
 //# sourceMappingURL=all.js.map
