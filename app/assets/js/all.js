@@ -27,37 +27,37 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// JS array filter、find 篩選
-// 1.篩選出符合條件的內容，組合後回傳新陣列。
-// 2.不會影響到原陣列
-// 比價網、下拉選擇市區、有誰有及格
-// find 找其中第一筆有符合的就好，其它就不再尋找了
-const arr = [1, 2, 3, 5, 10, 20, 30, 40];
-const newArr = arr.find(function(item){
-  console.log(item);
-  return item >= 5;
-});
-  //[5, 10]
-console.log(newArr);
+// find 值提取出來 
+// findIndex 索引 編號第幾筆資料
 
-// 分數
-const scoreData = [
+const colors = ['red', 'blue', 'black']; 
+
+const blueIndex = colors.findIndex(function(item){
+  return item == 'red';
+});
+
+console.log(blueIndex);
+
+// 訂單編號
+const orders = [
   {
-    name: '小明',
-    score: 88
+    name: '小廖',
+    orderId: '12384955'
   },
   {
-    name: '小英',
-    score: 62
-  }, 
+    name: '小華',
+    orderId: '12384945'
+  },
   {
-    name: '小花',
-    score: 53
-  }, 
+    name: '小美',
+    orderId: '1231495'
+  }
 ]
 
-const filterScoreData = scoreData.find(function(item){
-  return item.score >= 60;
+// 需要知道小華訂單的索引值是多少？
+const huaId = orders.findIndex(function(item){
+  return item.orderId == '12384945';
 });
 
-console.log(filterScoreData);
+console.log(huaId);
+console.log(`這個訂單編號的主人是${orders[huaId].name}`);
