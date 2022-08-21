@@ -28,3 +28,12 @@ function renderData(showData) {
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 陣列操作 map
+// 1.能將原始陣列運算後，重新組合回傳一個新陣列
+// 2.不會影響到原陣列
+
+const arr = [1, 5, 10];
+const newArr = arr.map(function(item){
+  return item*item;
+});
+console.log(newArr);
+console.log(arr);
