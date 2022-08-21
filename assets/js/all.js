@@ -39,21 +39,27 @@ function renderData(showData) {
 var myData = [];
 var txt = document.querySelector('.txt');
 var save = document.querySelector('.save');
-var list = document.querySelector('.list'); //寫一個函式把裡面的處理方式都包起來
+var list = document.querySelector('.list'); // 寫一個函式把裡面的處理方式都包起來
 // 狀態初始化用的
 
 function myRenderData() {
   var str = '';
   myData.forEach(function (item, index) {
-    str += "\n  <li class=\"ms-2\">\xB7".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\u4EE3\u8FA8\" data-num=\"").concat(index, "\" class=\"delete m-2\"></li>\n  ");
+    str += "\n    <li class=\"m-2 fs-4\">\xB7".concat(item.content, "<input type=\"button\" value=\"\u522A\u9664\" data-num=\"").concat(index, "\" class=\"delete m-2\"></li>\n    ");
   });
   var list = document.querySelector('.list');
   list.innerHTML = str;
-  txt.value = ''; //按 " 儲存代辦 " 後會回到空值的狀態
-} //新增代辦功能
+  txt.value = '';
+} // myRender();
+//新增代辦功能
 
 
 save.addEventListener('click', function (e) {
+  if (txt.value == '') {
+    alert('此欄位不可為空');
+    return;
+  }
+
   var myObj = {};
   myObj.content = txt.value;
   myData.push(myObj);
@@ -62,14 +68,12 @@ save.addEventListener('click', function (e) {
 
 list.addEventListener('click', function (e) {
   if (e.target.getAttribute('class') !== 'delete m-2') {
-    alert('你點到其它地方了喔!!');
+    alert('你沒有點到正確的按鈕');
     return;
   }
 
-  var num = e.target.getAttribute('data-num'); //將索引值取出
-
-  myData.splice(num, 1); //刪除資料
-
-  myRenderData(); //再次將資料給顯示出來
+  var num = e.target.getAttribute('data-num');
+  myData.splice(num, 1);
+  myRenderData();
 });
 //# sourceMappingURL=all.js.map
