@@ -30,34 +30,55 @@ function renderData(showData) {
 // find 值提取出來 
 // findIndex 索引 編號第幾筆資料
 
-const colors = ['red', 'blue', 'black']; 
+// const colors = ['red', 'blue', 'black']; 
 
-const blueIndex = colors.findIndex(function(item){
-  return item == 'red';
+// const blueIndex = colors.findIndex(function(item){
+//   return item == 'red';
+// });
+
+// console.log(blueIndex);
+
+// // 訂單編號
+// const orders = [
+//   {
+//     name: '小廖',
+//     orderId: '12384955'
+//   },
+//   {
+//     name: '小華',
+//     orderId: '12384945'
+//   },
+//   {
+//     name: '小美',
+//     orderId: '1231495'
+//   }
+// ]
+
+// // 需要知道小華訂單的索引值是多少？
+// const huaId = orders.findIndex(function(item){
+//   return item.orderId == '12384945';
+// });
+
+// console.log(huaId);
+// console.log(`這個訂單編號的主人是${orders[huaId].name}`);
+
+const arr = [1, 5, 10];
+let total = 0;
+const newArr = arr.map(function(item){
+  return item*item;
 });
-
-console.log(blueIndex);
-
-// 訂單編號
-const orders = [
-  {
-    name: '小廖',
-    orderId: '12384955'
-  },
-  {
-    name: '小華',
-    orderId: '12384945'
-  },
-  {
-    name: '小美',
-    orderId: '1231495'
-  }
-]
-
-// 需要知道小華訂單的索引值是多少？
-const huaId = orders.findIndex(function(item){
-  return item.orderId == '12384945';
+arr.forEach(function(item){
+  total += item;
 });
+console.log(newArr);
+console.log(arr);
+console.log(total);
 
-console.log(huaId);
-console.log(`這個訂單編號的主人是${orders[huaId].name}`);
+const thirdData = [1, 8, 13, 20];                    //原陣列
+const newData = thirdData.map(function(item){        //新陣列
+  let myObj = {}; 
+  myObj.checkNum = item > 10;
+  return myObj;
+});
+console.log(thirdData);
+console.log(newData);
