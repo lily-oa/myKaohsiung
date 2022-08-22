@@ -33,30 +33,21 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// find 值提取出來 
-// findIndex 索引 編號第幾筆資料
+// 箭頭函式
+//函式陳述式
 
 
-var colors = ['red', 'blue', 'black'];
-var blueIndex = colors.findIndex(function (item) {
-  return item == 'red';
-});
-console.log(blueIndex); // 訂單編號
+function numA(x) {
+  return x * x;
+} //函式表達式
 
-var orders = [{
-  name: '小廖',
-  orderId: '12384955'
-}, {
-  name: '小華',
-  orderId: '12384945'
-}, {
-  name: '小美',
-  orderId: '1231495'
-}]; // 需要知道小華訂單的索引值是多少？
 
-var huaId = orders.findIndex(function (item) {
-  return item.orderId == '12384945';
-});
-console.log(huaId);
-console.log("\u9019\u500B\u8A02\u55AE\u7DE8\u865F\u7684\u4E3B\u4EBA\u662F".concat(orders[huaId].name));
+var numB = function numB(x) {
+  return x * x;
+}; //箭頭函式
+
+
+var numC = function numC(x) {
+  return x * x;
+};
 //# sourceMappingURL=all.js.map
