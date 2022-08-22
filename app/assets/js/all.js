@@ -27,58 +27,20 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// find 值提取出來 
-// findIndex 索引 編號第幾筆資料
+// 箭頭函式
 
-// const colors = ['red', 'blue', 'black']; 
+//函式陳述式
+function numA(x){
+  return x * x;
+}
 
-// const blueIndex = colors.findIndex(function(item){
-//   return item == 'red';
-// });
 
-// console.log(blueIndex);
+//函式表達式
+const numB = function(x){
+  return x * x;
+}
 
-// // 訂單編號
-// const orders = [
-//   {
-//     name: '小廖',
-//     orderId: '12384955'
-//   },
-//   {
-//     name: '小華',
-//     orderId: '12384945'
-//   },
-//   {
-//     name: '小美',
-//     orderId: '1231495'
-//   }
-// ]
-
-// // 需要知道小華訂單的索引值是多少？
-// const huaId = orders.findIndex(function(item){
-//   return item.orderId == '12384945';
-// });
-
-// console.log(huaId);
-// console.log(`這個訂單編號的主人是${orders[huaId].name}`);
-
-const arr = [1, 5, 10];
-let total = 0;
-const newArr = arr.map(function(item){
-  return item*item;
-});
-arr.forEach(function(item){
-  total += item;
-});
-console.log(newArr);
-console.log(arr);
-console.log(total);
-
-const thirdData = [1, 8, 13, 20];                    //原陣列
-const newData = thirdData.map(function(item){        //新陣列
-  let myObj = {}; 
-  myObj.checkNum = item > 10;
-  return myObj;
-});
-console.log(thirdData);
-console.log(newData);
+//箭頭函式
+const numC = (x) => {
+  return x * x;
+}
