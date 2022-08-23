@@ -31,29 +31,18 @@ function renderData(showData) {
 
 //函式陳述式
 function numA(x){
-  return x * x;
+  return x*x;
 }
-
 
 //函式表達式
 const numB = function(x){
-  return x * x;
-}
-
-//箭頭函式
-// const numC = (x) => {
-//   return x * x;
-// }
-
-console.log(test1(2));
-
-
-function test1(x){
-return x*x*x;
-}
-
-const test2 = function(x){
   return x*x*x;
 }
 
-console.log(test2(4));
+//箭頭函式
+const numC = (x) => {
+  return x*x;
+}
+
+console.log(numB(2));
+console.log(numA(5));
