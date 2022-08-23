@@ -45,9 +45,20 @@ function numA(x) {
 var numB = function numB(x) {
   return x * x;
 }; //箭頭函式
+// const numC = (x) => {
+//   return x * x;
+// }
 
 
-var numC = function numC(x) {
-  return x * x;
+console.log(test1(2));
+
+function test1(x) {
+  return x * x * x;
+}
+
+var test2 = function test2(x) {
+  return x * x * x;
 };
+
+console.log(test2(4));
 //# sourceMappingURL=all.js.map
