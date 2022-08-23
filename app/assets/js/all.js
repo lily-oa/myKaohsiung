@@ -41,6 +41,19 @@ const numB = function(x){
 }
 
 //箭頭函式
-const numC = (x) => {
-  return x * x;
+// const numC = (x) => {
+//   return x * x;
+// }
+
+console.log(test1(2));
+
+
+function test1(x){
+return x*x*x;
 }
+
+const test2 = function(x){
+  return x*x*x;
+}
+
+console.log(test2(4));
