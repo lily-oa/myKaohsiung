@@ -27,22 +27,15 @@ function renderData(showData) {
 // 渲染所有清單資料到畫面上
 
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// 箭頭函式
+// 箭頭函式，縮寫寫法
+// 如果函式搭配 return 
+// 如果只有一個參數，可以省略大括號
+// 沒有參數，還是要有空括號
 
-//函式陳述式
-function numA(x){
-  return x*x;
-}
+const numA = (x) => x*x;  //return 可以省略
 
-//函式表達式
-const numB = function(x){
-  return x*x*x;
-}
+console.log(numA(3));
 
-//箭頭函式
-const numC = (x) => {
-  return x*x;
-}
+const numB = () => `數字相乘${9}`;
 
-console.log(numB(2));
-console.log(numA(5));
+console.log(numB());
