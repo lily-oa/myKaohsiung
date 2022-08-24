@@ -33,24 +33,22 @@ function renderData(showData) {
   pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// 箭頭函式
-//函式陳述式
+// 箭頭函式，縮寫寫法
+// 如果函式搭配 return 
+// 如果只有一個參數，可以省略大括號
+// 沒有參數，還是要有空括號
 
 
-function numA(x) {
+var numA = function numA(x) {
   return x * x;
-} //函式表達式
+}; //return 可以省略
 
 
-var numB = function numB(x) {
-  return x * x * x;
-}; //箭頭函式
+console.log(numA(3));
 
-
-var numC = function numC(x) {
-  return x * x;
+var numB = function numB() {
+  return "\u6578\u5B57\u76F8\u4E58".concat(9);
 };
 
-console.log(numB(2));
-console.log(numA(5));
+console.log(numB());
 //# sourceMappingURL=all.js.map
