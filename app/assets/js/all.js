@@ -29,12 +29,12 @@ function renderData(showData) {
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 陣列操作 map、 filter
 
-// const myData = [1, 8, 13, 20];
-// const newData = myData.map(function(item){
-//   return item + 2;
-// });
+const myData = [1, 8, 13, 20];
+const newData = myData.map(function(item){
+  return item + 2;
+});
 
-// console.log(newData);
+console.log(newData);
 
 // 簡寫成箭頭函式
 const newData2 = myData.map((item) => {
