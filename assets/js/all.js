@@ -34,16 +34,18 @@ function renderData(showData) {
 } // 渲染所有清單資料到畫面上
 //-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
 // 陣列操作 map、 filter
+// const myData = [1, 8, 13, 20];
+// const newData = myData.map(function(item){
+//   return item + 2;
+// });
+// console.log(newData);
+// 簡寫成箭頭函式
 
-
-var myData = [1, 8, 13, 20];
-var newData = myData.map(function (item) {
-  return item + 2;
-});
-console.log(newData); // 簡寫成箭頭函式
 
 var newData2 = myData.map(function (item) {
-  return item + 3;
+  var a = 3;
+  var b = 2;
+  return item + a + b;
 });
 console.log(newData2);
 //# sourceMappingURL=all.js.map
