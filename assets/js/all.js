@@ -8,12 +8,22 @@ var tabsList = document.querySelector('.tabs-list'); //熱門區
 
 var subtitle = document.querySelector('.subtitle'); //卡片標題
 
-var cardList = document.querySelector('.card-list'); //卡片
+var cardList = document.querySelector('.card-list'); //卡片  ul
 
 var pageList = document.querySelector('.pagination-list'); // 分頁
 
 var data = [];
-var page = {}; // 渲染 select filter
+var page = {}; // axios get data
+
+function getData() {
+  axios.get(url).then(function (response) {
+    data = response.data.result.records;
+    console.log(response.data);
+    renderData(data);
+  });
+}
+
+getData(); // 渲染 select filter
 
 function renderData(showData) {
   // 渲染有存在的行政區到選單欄位
@@ -29,7 +39,6 @@ function renderData(showData) {
     selectStr += list;
   });
   select.innerHTML = selectStr;
-  subtitle.textContent = '高雄全區';
-  pagination(showData, 1);
+  subtitle.textContent = '高雄全區'; // pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 //# sourceMappingURL=all.js.map
