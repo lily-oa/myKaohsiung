@@ -35,7 +35,7 @@ function renderData(showData) {
   });
   select.innerHTML = selectStr;
   subtitle.textContent = '高雄全區';
-
+  
   // pagination(showData, 1);
 }
 
