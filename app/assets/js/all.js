@@ -22,8 +22,12 @@ getData();
 // 渲染 select filter
 function renderData(showData) {
   // 渲染有存在的行政區到選單欄位
-  let selectGroup = showData.map(item => item.Zone);
-  let newSelect = selectGroup.filter((item, index) => selectGroup.indexOf(item) == index);
+  let selectGroup = showData.map((item) => {
+    return item.Zone;
+  });
+  let newSelect = selectGroup.filter((item, index) => {
+    return selectGroup.indexOf(item) == index
+  });
   let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
   newSelect.forEach(function (item) {
     let list = `<option value="${item}">${item}</option>`;
