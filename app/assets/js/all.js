@@ -26,21 +26,4 @@ function renderData(showData) {
 
 // 渲染所有清單資料到畫面上
 
-//-----------------------------------------------------------------暫時新學習需用到的語法再寫專案
-// 陣列操作 map、 filter
 
-const myData = [1, 8, 13, 20];
-const newData = myData.map(function(item){
-  return item + 2;
-});
-
-console.log(newData);
-
-// 簡寫成箭頭函式
-const newData2 = myData.map((item) => {
-  const a = 3;
-  const b = 2;
-  return item + a + b;
-});
-
-console.log(newData2);
