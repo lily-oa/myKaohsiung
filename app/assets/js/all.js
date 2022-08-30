@@ -26,21 +26,58 @@ function renderData(showData) {
   let selectGroup = showData.map((item) => {
     return item.Zone;
   });
-  console.log(selectGroup);
+  
   let newSelect = selectGroup.filter((item, index) => {
     return selectGroup.indexOf(item) == index;
   });
-  console.log(newSelect)
-  // let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
-  // newSelect.forEach(function (item) {
-  //   let list = `<option value="${item}">${item}</option>`;
-  //   selectStr += list;
-  // });
-  // select.innerHTML = selectStr;
-  // subtitle.textContent = '高雄全區';
+
+  let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
+  newSelect.forEach(function (item) {
+    let list = `<option value="${item}">${item}</option>`;
+    selectStr += list;
+  });
+  select.innerHTML = selectStr;
+  subtitle.textContent = '高雄全區';
   
   // pagination(showData, 1);
 }
 
 // 渲染所有清單資料到畫面上
-renderData();
+function updateData(showData){
+  let str = '';
+  showData.forEach(function(item){
+    let content = `li class="card">
+      <div class="card-header" style="background-image:url(${item.picture1})" title="${item.Picdescribe1}">
+        <div class="card-title">
+          <h4>${item.Name}</h4>
+          <p>${item.Zone}</p>
+        </div>
+      </div>
+      <ul class="card-body">
+        <li>
+          <i class="fas fa-clock"></i>
+          <p>${item.Opentime}</p>
+        </li>
+        <li>
+          <i class="fas fa-map-marker-alt"></i>
+          <p>${item.Add}</p>
+        </li>
+        <li class="card-footer-list d-flex flex-lg-column justify-content-lg-start align-items-lg-start">
+          <div class="card-footer-item" data-charge="free">
+            <i class="fas fa-mobile-alt"></i>
+            <p>${item.Tel}</p>
+          </div>
+          <div class="card-footer-item" data-display=${item.Ticketinfo == '免費參觀'?"" : "d-none"}>
+            <i class="fas fa-tag"></i>
+            <p>${item.Ticketinfo}</p>
+          </div>
+        </li>
+      </ul>
+    </li>`;
+    str += content;
+  });
+  cardList.innerHTML = str;
+}
+
+
+
