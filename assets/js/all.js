@@ -33,16 +33,22 @@ function renderData(showData) {
   var newSelect = selectGroup.filter(function (item, index) {
     return selectGroup.indexOf(item) == index;
   });
-  console.log(newSelect); // let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
-  // newSelect.forEach(function (item) {
-  //   let list = `<option value="${item}">${item}</option>`;
-  //   selectStr += list;
-  // });
-  // select.innerHTML = selectStr;
-  // subtitle.textContent = '高雄全區';
-  // pagination(showData, 1);
+  var selectStr = "<option value=\"\u9AD8\u96C4\u5168\u5340\" selected\">-- \u9AD8\u96C4\u5168\u5340 --</option>";
+  newSelect.forEach(function (item) {
+    var list = "<option value=\"".concat(item, "\">").concat(item, "</option>");
+    selectStr += list;
+  });
+  select.innerHTML = selectStr;
+  subtitle.textContent = '高雄全區'; // pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 
 
-renderData();
+function updateData(showData) {
+  var str = '';
+  showData.forEach(function (item) {
+    var content = "li class=\"card\">\n      <div class=\"card-header\" style=\"background-image:url(".concat(item.picture1, ")\" title=\"").concat(item.Picdescribe1, "\">\n        <div class=\"card-title\">\n          <h4>").concat(item.Name, "</h4>\n          <p>").concat(item.Zone, "</p>\n        </div>\n      </div>\n      <ul class=\"card-body\">\n        <li>\n          <i class=\"fas fa-clock\"></i>\n          <p>").concat(item.Opentime, "</p>\n        </li>\n        <li>\n          <i class=\"fas fa-map-marker-alt\"></i>\n          <p>").concat(item.Add, "</p>\n        </li>\n        <li class=\"card-footer-list d-flex flex-lg-column justify-content-lg-start align-items-lg-start\">\n          <div class=\"card-footer-item\" data-charge=\"free\">\n            <i class=\"fas fa-mobile-alt\"></i>\n            <p>").concat(item.Tel, "</p>\n          </div>\n          <div class=\"card-footer-item\" data-display=").concat(item.Ticketinfo == '免費參觀' ? "" : "d-none", ">\n            <i class=\"fas fa-tag\"></i>\n            <p>").concat(item.Ticketinfo, "</p>\n          </div>\n        </li>\n      </ul>\n    </li>");
+    str += content;
+  });
+  cardList.innerHTML = str;
+}
 //# sourceMappingURL=all.js.map
