@@ -17,26 +17,32 @@ var page = {}; // axios get data
 
 function getData() {
   axios.get(url).then(function (response) {
-    data = response.data.result.records;
-    console.log(data);
+    data = response.data.result.records; // console.log(data);
+
+    renderData(data);
   });
-} // // 渲染 select filter
-// function renderData(showData) {
-//   // 渲染有存在的行政區到選單欄位
-//   let selectGroup = showData.map((item) => {
-//     return item.Zone;
-//   });
-//   let newSelect = selectGroup.filter((item, index) => {
-//     return selectGroup.indexOf(item) == index
-//   });
-//   let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
-//   newSelect.forEach(function (item) {
-//     let list = `<option value="${item}">${item}</option>`;
-//     selectStr += list;
-//   });
-//   select.innerHTML = selectStr;
-//   subtitle.textContent = '高雄全區';
-//   // pagination(showData, 1);
-// }
-// // 渲染所有清單資料到畫面上
+}
+
+getData(); // 渲染 select filter  初始化
+
+function renderData(showData) {
+  // 渲染有存在的行政區到選單欄位
+  var selectGroup = showData.map(function (item) {
+    return item.Zone;
+  });
+  var newSelect = selectGroup.filter(function (item, index) {
+    return selectGroup.indexOf(item) == index;
+  });
+  console.log(newSelect); // let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
+  // newSelect.forEach(function (item) {
+  //   let list = `<option value="${item}">${item}</option>`;
+  //   selectStr += list;
+  // });
+  // select.innerHTML = selectStr;
+  // subtitle.textContent = '高雄全區';
+  // pagination(showData, 1);
+} // 渲染所有清單資料到畫面上
+
+
+renderData();
 //# sourceMappingURL=all.js.map
