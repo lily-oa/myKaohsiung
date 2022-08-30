@@ -26,6 +26,7 @@ function renderData(showData) {
   let selectGroup = showData.map((item) => {
     return item.Zone;
   });
+  console.log(selectGroup);
   let newSelect = selectGroup.filter((item, index) => {
     return selectGroup.indexOf(item) == index;
   });
