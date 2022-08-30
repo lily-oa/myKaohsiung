@@ -67,7 +67,7 @@ function updateData(showData){
             <i class="fas fa-mobile-alt"></i>
             <p>${item.Tel}</p>
           </div>
-          <div class="card-footer-item" data-display=${item.Ticketinfo == '免費參觀'?"" : "d-none"}>
+          <div class="card-footer-item" data-display=${item.Ticketinfo == '免費參觀' ? "" : "d-none"}>
             <i class="fas fa-tag"></i>
             <p>${item.Ticketinfo}</p>
           </div>
@@ -79,5 +79,22 @@ function updateData(showData){
   cardList.innerHTML = str;
 }
 
+// 監聽select change event
+select.addEventListener('change', switchDataSelect, false);
+function switchDataSelect(e){
+  if(e.target.value == ''){
+    return;
+  }
 
+  let chosenDistrict = e.target.value;
+  dataFilter(chosenDistrict);
+
+  // 切換分頁
+  if(e.target.dataset.type === 'tab' || e.target.dataset.type === 'num'){
+    const page = e.target.dataset.page;
+    dataFilter(chosenDistrict);
+    pagination(dataFilter(chosenDistrict), page);
+  }
+  return false;
+}
 
