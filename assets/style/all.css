@@ -14801,6 +14801,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 90%;
 }
 
 @media (min-width: 768px) {

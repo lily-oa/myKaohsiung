@@ -51,24 +51,19 @@ function updateData(showData) {
   });
   cardList.innerHTML = str;
 } // 監聽select change event
-
-
-select.addEventListener('change', switchDataSelect, false);
-
-function switchDataSelect(e) {
-  if (e.target.value == '') {
-    return;
-  }
-
-  var chosenDistrict = e.target.value;
-  dataFilter(chosenDistrict); // 切換分頁
-
-  if (e.target.dataset.type === 'tab' || e.target.dataset.type === 'num') {
-    var _page = e.target.dataset.page;
-    dataFilter(chosenDistrict);
-    pagination(dataFilter(chosenDistrict), _page);
-  }
-
-  return false;
-}
+// select.addEventListener('change', switchDataSelect, false);
+// function switchDataSelect(e){
+//   if(e.target.value == ''){
+//     return;
+//   }
+//   let chosenDistrict = e.target.value;
+//   dataFilter(chosenDistrict);
+//   // 切換分頁
+//   if(e.target.dataset.type === 'tab' || e.target.dataset.type === 'num'){
+//     const page = e.target.dataset.page;
+//     dataFilter(chosenDistrict);
+//     pagination(dataFilter(chosenDistrict), page);
+//   }
+//   return false;
+// }
 //# sourceMappingURL=all.js.map
