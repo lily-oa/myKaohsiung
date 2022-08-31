@@ -80,21 +80,21 @@ function updateData(showData){
 }
 
 // 監聽select change event
-select.addEventListener('change', switchDataSelect, false);
-function switchDataSelect(e){
-  if(e.target.value == ''){
-    return;
-  }
+// select.addEventListener('change', switchDataSelect, false);
+// function switchDataSelect(e){
+//   if(e.target.value == ''){
+//     return;
+//   }
 
-  let chosenDistrict = e.target.value;
-  dataFilter(chosenDistrict);
+//   let chosenDistrict = e.target.value;
+//   dataFilter(chosenDistrict);
 
-  // 切換分頁
-  if(e.target.dataset.type === 'tab' || e.target.dataset.type === 'num'){
-    const page = e.target.dataset.page;
-    dataFilter(chosenDistrict);
-    pagination(dataFilter(chosenDistrict), page);
-  }
-  return false;
-}
+//   // 切換分頁
+//   if(e.target.dataset.type === 'tab' || e.target.dataset.type === 'num'){
+//     const page = e.target.dataset.page;
+//     dataFilter(chosenDistrict);
+//     pagination(dataFilter(chosenDistrict), page);
+//   }
+//   return false;
+// }
 
