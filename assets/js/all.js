@@ -17,8 +17,8 @@ var page = {}; // axios get data
 
 function getData() {
   axios.get(url).then(function (response) {
-    data = response.data.result.records; // console.log(data);
-
+    data = response.data.result.records;
+    console.log(data);
     renderData(data);
   });
 }
