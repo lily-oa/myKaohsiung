@@ -1,4 +1,4 @@
-const url = 'https://api.kcg.gov.tw/api/service/get/9c8e1450-e833-499c-8320-29b36b7ace5c'; //高旅網  api
+const url = 'https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json'; //高旅網  api
 const select = document.querySelector('.select-group'); //行政區
 const tabsList = document.querySelector('.tabs-list'); //熱門區
 const subtitle = document.querySelector('.subtitle'); //卡片標題
@@ -13,7 +13,7 @@ function getData(){
   axios.get(url)
   .then(function(response){
     data = response.data.result.records;
-    // console.log(data);
+    console.log(data);
     renderData(data);
   });
 }
