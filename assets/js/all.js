@@ -13,7 +13,7 @@ var cardList = document.querySelector('.card-list'); //卡片  ul
 var pageList = document.querySelector('.pagination-list'); // 分頁
 
 var data = [];
-var page = {}; // axios get data
+var page = {}; // axios get data  串接外部 api
 
 function getData() {
   axios.get(url).then(function (response) {
@@ -106,6 +106,7 @@ function pagination(data, nowPage) {
     //boolean
     hasNext: currentPage < dataTotal
   };
+  console.log(page);
   updateData(currentPageData); // pageBtn(page, nowPage);
 }
 //# sourceMappingURL=all.js.map
