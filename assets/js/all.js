@@ -47,7 +47,7 @@ function renderData(showData) {
 function updateData(showData) {
   var str = '';
   showData.forEach(function (item) {
-    var content = "li class=\"card\">\n      <div class=\"card-header\" style=\"background-image:url(".concat(item.picture1, ")\" title=\"").concat(item.Picdescribe1, "\">\n        <div class=\"card-title\">\n          <h4>").concat(item.Name, "</h4>\n          <p>").concat(item.Zone, "</p>\n        </div>\n      </div>\n      <ul class=\"card-body\">\n        <li>\n          <i class=\"fas fa-clock\"></i>\n          <p>").concat(item.Opentime, "</p>\n        </li>\n        <li>\n          <i class=\"fas fa-map-marker-alt\"></i>\n          <p>").concat(item.Add, "</p>\n        </li>\n        <li class=\"card-footer-list d-flex flex-lg-column justify-content-lg-start align-items-lg-start\">\n          <div class=\"card-footer-item\" data-charge=\"free\">\n            <i class=\"fas fa-mobile-alt\"></i>\n            <p>").concat(item.Tel, "</p>\n          </div>\n          <div class=\"card-footer-item\" data-display=").concat(item.Ticketinfo == '免費參觀' ? "" : "d-none", ">\n            <i class=\"fas fa-tag\"></i>\n            <p>").concat(item.Ticketinfo, "</p>\n          </div>\n        </li>\n      </ul>\n    </li>");
+    var content = "\n    <li class=\"card\">\n      <div class=\"card-header\" style=\"background-image:url(".concat(item.Picture1, ")\" title=\"").concat(item.Picdescribe1, "\">\n        <div class=\"card-title\">\n          <h4>").concat(item.Name, "</h4>\n          <p>").concat(item.Zone, "</p>\n        </div>\n      </div>\n      <ul class=\"card-body\">\n        <li>\n          <i class=\"fas fa-clock\"></i>\n          <p>").concat(item.Opentime, "</p>\n        </li>\n        <li>\n          <i class=\"fas fa-map-marker-alt\"></i>\n          <p>").concat(item.Add, "</p>\n        </li>\n        <li class=\"card-footer-list d-flex flex-lg-column justify-content-lg-start align-items-lg-start\">\n          <div class=\"card-footer-item\" data-charge=\"free\">\n            <i class=\"fas fa-mobile-alt\"></i>\n            <p>").concat(item.Tel, "</p>\n          </div>\n          <div class=\"card-footer-item\" data-display=").concat(item.Ticketinfo == '免費參觀' ? "" : "d-none", ">\n            <i class=\"fas fa-tag\"></i>\n            <p>").concat(item.Ticketinfo, "</p>\n          </div>\n        </li>\n      </ul>\n    </li>\n    ");
     str += content;
   });
   cardList.innerHTML = str;
@@ -102,11 +102,10 @@ function pagination(data, nowPage) {
     dataTotal: dataTotal,
     pageTotal: pageTotal,
     currentPage: currentPage,
-    hasPage: currenPage > 1,
+    hasPage: currentPage > 1,
     //boolean
     hasNext: currentPage < dataTotal
   };
-  updateData(currentPageData);
-  pageBtn(page, nowPage);
+  updateData(currentPageData); // pageBtn(page, nowPage);
 }
 //# sourceMappingURL=all.js.map
