@@ -98,3 +98,4 @@ function updateData(showData){
 //   return false;
 // }
 
+// 輸入showData 資料，用來計算 page 數量資料
