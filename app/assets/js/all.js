@@ -122,10 +122,10 @@ function pagination(data, nowPage){
   data.forEach((item, index) => {
   //獲取陣列索引，但因為索引是從 0 開始所以要 +1
   const num = index + 1;
-
+  
   if(num >= minData && num <= maxData){
-    currenPageData.push(item); //用來篩選的陣列
-  }
+    currentPageData.push(item);  //用來篩選的陣列
+    };
   });
 
   // 物件中的資料都是字串
