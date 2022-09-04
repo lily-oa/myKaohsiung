@@ -46,8 +46,9 @@ function renderData(showData) {
 function updateData(showData){
   let str = '';
   showData.forEach(function(item){
-    let content = `li class="card">
-      <div class="card-header" style="background-image:url(${item.picture1})" title="${item.Picdescribe1}">
+    let content = `
+    <li class="card">
+      <div class="card-header" style="background-image:url(${item.Picture1})" title="${item.Picdescribe1}">
         <div class="card-title">
           <h4>${item.Name}</h4>
           <p>${item.Zone}</p>
@@ -73,7 +74,8 @@ function updateData(showData){
           </div>
         </li>
       </ul>
-    </li>`;
+    </li>
+    `;
     str += content;
   });
   cardList.innerHTML = str;
@@ -127,17 +129,19 @@ function pagination(data, nowPage){
     currentPageData.push(item);  //用來篩選的陣列
     };
   });
-
+  
   // 物件中的資料都是字串
   page = {
     dataTotal, 
     pageTotal, 
     currentPage,
-    hasPage: currenPage > 1, //boolean
+    hasPage: currentPage > 1, //boolean
     hasNext: currentPage < dataTotal,
   };
 
   updateData(currentPageData);
-  pageBtn(page, nowPage);
+  // pageBtn(page, nowPage);
 
 }
+
+
