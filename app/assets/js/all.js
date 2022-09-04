@@ -82,23 +82,23 @@ function updateData(showData){
 }
 
 // 監聽select change event
-// select.addEventListener('change', switchDataSelect, false);
-// function switchDataSelect(e){
-//   if(e.target.value == ''){
-//     return;
-//   }
+select.addEventListener('change', switchDataSelect, false);
+function switchDataSelect(e){
+  if(e.target.value == ''){
+    return;
+  }
 
-//   let chosenDistrict = e.target.value;
-//   dataFilter(chosenDistrict);
+  let chosenDistrict = e.target.value;
+  dataFilter(chosenDistrict);
 
-//   // 切換分頁
-//   if(e.target.dataset.type === 'tab' || e.target.dataset.type === 'num'){
-//     const page = e.target.dataset.page;
-//     dataFilter(chosenDistrict);
-//     pagination(dataFilter(chosenDistrict), page);
-//   }
-//   return false;
-// }
+  // 切換分頁
+  if(e.target.dataset.type === 'tab' || e.target.dataset.type === 'num'){
+    const page = e.target.dataset.page;
+    dataFilter(chosenDistrict);
+    pagination(dataFilter(chosenDistrict), page);
+  }
+  return false;
+}
 
 // 輸入showData 資料，用來計算 page 數量資料
 function pagination(data, nowPage){
@@ -139,10 +139,11 @@ function pagination(data, nowPage){
     hasNext: currentPage < dataTotal,
   };
 
-  console.log(page);
   updateData(currentPageData);
   // pageBtn(page, nowPage);
-
 }
 
-
+// 新增頁數功能 渲染在畫面中 ->放到renderData
+function pageBtn(page, current){
+  console.log(page);
+}
