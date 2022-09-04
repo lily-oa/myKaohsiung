@@ -145,5 +145,5 @@ function pagination(data, nowPage){
 
 // 新增頁數功能 渲染在畫面中 ->放到renderData
 function pageBtn(page, current){
-  console.log(page);
+  
 }
