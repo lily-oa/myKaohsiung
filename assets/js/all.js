@@ -39,7 +39,8 @@ function renderData(showData) {
     selectStr += list;
   });
   select.innerHTML = selectStr;
-  subtitle.textContent = '高雄全區'; // pagination(showData, 1);
+  subtitle.textContent = '高雄全區';
+  pagination(showData, 1);
 } // 渲染所有清單資料到畫面上
 
 
@@ -74,10 +75,36 @@ function pagination(data, nowPage) {
   var showPerPage = 6; // 可能會有餘數 -> 無條件進位
 
   var pageTotal = Math.ceil(dataTotal / showPerPage);
-  var currentPage = nowPage; // 
+  var currentPage = nowPage; // 當 "當前頁數" 比 "總頁數" 大的時候，"當前頁數" 就等於 "總頁數"
 
   if (currentPage > pageTotal) {
     currentPage = pageTotal;
-  }
+  } // 最小值公式 -> 當前可顯示的最少資料量
+
+
+  var minData = currentPage * showPerPage - showPerPage + 1; // 最大值公式 -> 當前可顯示的最資料量
+
+  var maxData = currentPage * showPerPage;
+  var currentPageData = []; //處理資料
+
+  data.forEach(function (item, index) {
+    //獲取陣列索引，但因為索引是從 0 開始所以要 +1
+    var num = index + 1;
+
+    if (num >= minData && num <= maxData) {
+      currenPageData.push(item); //用來篩選的陣列
+    }
+  }); // 物件中的資料都是字串
+
+  page = {
+    dataTotal: dataTotal,
+    pageTotal: pageTotal,
+    currentPage: currentPage,
+    hasPage: currenPage > 1,
+    //boolean
+    hasNext: currentPage < dataTotal
+  };
+  updateData(currentPageData);
+  pageBtn(page, nowPage);
 }
 //# sourceMappingURL=all.js.map
