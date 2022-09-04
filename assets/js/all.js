@@ -67,4 +67,17 @@ function updateData(showData) {
 //   return false;
 // }
 // 輸入showData 資料，用來計算 page 數量資料
+
+
+function pagination(data, nowPage) {
+  var dataTotal = data.length;
+  var showPerPage = 6; // 可能會有餘數 -> 無條件進位
+
+  var pageTotal = Math.ceil(dataTotal / showPerPage);
+  var currentPage = nowPage; // 
+
+  if (currentPage > pageTotal) {
+    currentPage = pageTotal;
+  }
+}
 //# sourceMappingURL=all.js.map
