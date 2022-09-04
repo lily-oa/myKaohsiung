@@ -8,7 +8,7 @@ const pageList = document.querySelector('.pagination-list'); // 分頁
 let data = [];
 let page = {};
 
-// axios get data
+// axios get data  串接外部 api
 function getData(){
   axios.get(url)
   .then(function(response){
@@ -139,6 +139,7 @@ function pagination(data, nowPage){
     hasNext: currentPage < dataTotal,
   };
 
+  console.log(page);
   updateData(currentPageData);
   // pageBtn(page, nowPage);
 
