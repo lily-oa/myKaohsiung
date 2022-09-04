@@ -92,8 +92,10 @@ function pagination(data, nowPage) {
     var num = index + 1;
 
     if (num >= minData && num <= maxData) {
-      currenPageData.push(item); //用來篩選的陣列
+      currentPageData.push(item); //用來篩選的陣列
     }
+
+    ;
   }); // 物件中的資料都是字串
 
   page = {
