@@ -52,22 +52,26 @@ function updateData(showData) {
   });
   cardList.innerHTML = str;
 } // 監聽select change event
-// select.addEventListener('change', switchDataSelect, false);
-// function switchDataSelect(e){
-//   if(e.target.value == ''){
-//     return;
-//   }
-//   let chosenDistrict = e.target.value;
-//   dataFilter(chosenDistrict);
-//   // 切換分頁
-//   if(e.target.dataset.type === 'tab' || e.target.dataset.type === 'num'){
-//     const page = e.target.dataset.page;
-//     dataFilter(chosenDistrict);
-//     pagination(dataFilter(chosenDistrict), page);
-//   }
-//   return false;
-// }
-// 輸入showData 資料，用來計算 page 數量資料
+
+
+select.addEventListener('change', switchDataSelect, false);
+
+function switchDataSelect(e) {
+  if (e.target.value == '') {
+    return;
+  }
+
+  var chosenDistrict = e.target.value;
+  dataFilter(chosenDistrict); // 切換分頁
+
+  if (e.target.dataset.type === 'tab' || e.target.dataset.type === 'num') {
+    var _page = e.target.dataset.page;
+    dataFilter(chosenDistrict);
+    pagination(dataFilter(chosenDistrict), _page);
+  }
+
+  return false;
+} // 輸入showData 資料，用來計算 page 數量資料
 
 
 function pagination(data, nowPage) {
@@ -106,7 +110,11 @@ function pagination(data, nowPage) {
     //boolean
     hasNext: currentPage < dataTotal
   };
-  console.log(page);
   updateData(currentPageData); // pageBtn(page, nowPage);
+} // 新增頁數功能 渲染在畫面中 ->放到renderData
+
+
+function pageBtn(page, current) {
+  console.log(page);
 }
 //# sourceMappingURL=all.js.map
