@@ -9,13 +9,13 @@ let data = [];
 let page = {};
 
 // axios get data  串接外部 api
-function getData(){
+function getData() {
   axios.get(url)
-  .then(function(response){
-    data = response.data.result.records;
-    console.log(data);
-    renderData(data);
-  });
+    .then(function (response) {
+      data = response.data.result.records;
+      console.log(data);
+      renderData(data);
+    });
 }
 getData();
 
@@ -26,7 +26,7 @@ function renderData(showData) {
   let selectGroup = showData.map((item) => {
     return item.Zone;
   });
-  
+
   let newSelect = selectGroup.filter((item, index) => {
     return selectGroup.indexOf(item) == index;
   });
@@ -38,14 +38,14 @@ function renderData(showData) {
   });
   select.innerHTML = selectStr;
   subtitle.textContent = '高雄全區';
-  
+
   pagination(showData, 1);
 }
 
 // 渲染所有清單資料到畫面上
-function updateData(showData){
+function updateData(showData) {
   let str = '';
-  showData.forEach(function(item){
+  showData.forEach(function (item) {
     let content = `
     <li class="card">
       <div class="card-header" style="background-image:url(${item.Picture1})" title="${item.Picdescribe1}">
@@ -83,8 +83,9 @@ function updateData(showData){
 
 // 監聽select change event
 select.addEventListener('change', switchDataSelect, false);
-function switchDataSelect(e){
-  if(e.target.value == ''){
+
+function switchDataSelect(e) {
+  if (e.target.value == '') {
     return;
   }
 
@@ -92,7 +93,7 @@ function switchDataSelect(e){
   dataFilter(chosenDistrict);
 
   // 切換分頁
-  if(e.target.dataset.type === 'tab' || e.target.dataset.type === 'num'){
+  if (e.target.dataset.type === 'tab' || e.target.dataset.type === 'num') {
     const page = e.target.dataset.page;
     dataFilter(chosenDistrict);
     pagination(dataFilter(chosenDistrict), page);
@@ -101,7 +102,7 @@ function switchDataSelect(e){
 }
 
 // 輸入showData 資料，用來計算 page 數量資料
-function pagination(data, nowPage){
+function pagination(data, nowPage) {
   const dataTotal = data.length;
   const showPerPage = 6;
   // 可能會有餘數 -> 無條件進位
@@ -109,8 +110,8 @@ function pagination(data, nowPage){
   let currentPage = nowPage;
 
   // 當 "當前頁數" 比 "總頁數" 大的時候，"當前頁數" 就等於 "總頁數"
-  if(currentPage > pageTotal){
-  currentPage = pageTotal;
+  if (currentPage > pageTotal) {
+    currentPage = pageTotal;
   }
 
   // 最小值公式 -> 當前可顯示的最少資料量
@@ -122,18 +123,18 @@ function pagination(data, nowPage){
   let currentPageData = [];
   //處理資料
   data.forEach((item, index) => {
-  //獲取陣列索引，但因為索引是從 0 開始所以要 +1
-  const num = index + 1;
-  
-  if(num >= minData && num <= maxData){
-    currentPageData.push(item);  //用來篩選的陣列
+    //獲取陣列索引，但因為索引是從 0 開始所以要 +1
+    const num = index + 1;
+
+    if (num >= minData && num <= maxData) {
+      currentPageData.push(item); //用來篩選的陣列
     };
   });
-  
+
   // 物件中的資料都是字串
   page = {
-    dataTotal, 
-    pageTotal, 
+    dataTotal,
+    pageTotal,
     currentPage,
     hasPage: currentPage > 1, //boolean
     hasNext: currentPage < dataTotal,
@@ -144,6 +145,6 @@ function pagination(data, nowPage){
 }
 
 // 新增頁數功能 渲染在畫面中 ->放到renderData
-function pageBtn(page, current){
-  
+function pageBtn(page, current) {
+
 }
