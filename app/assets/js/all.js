@@ -148,3 +148,33 @@ function pagination(data, nowPage) {
 function pageBtn(page, current) {
 
 }
+
+// 這一段無效 只能用全區 data
+function switchPage(e){
+  e.preventDefault();
+  if(e.target.nodeName !== 'A'){
+    return;
+  };
+  
+  const pageClicked = parseInt(e.target.dataset.page);
+  pagination(data, pageClicked);
+}
+
+// 用這行取代 switch Page 防止換頁監聽資訊遺漏
+function dataFilter(chosenDistrict){
+  let filterData = [];
+  data.filter(function(item){
+    if(chosenDistrict === item.Zone){
+      filterData.push(item);
+    } else if (chosenDistrict === '高雄全區'){
+      filterData = data;
+    }
+    return filterData;
+  });
+  
+  
+  select.value = chosenDistrict;
+  subtitle.textContent = chosenDistrict;
+  pagination(filterData, 1);
+  return filterData;
+}
