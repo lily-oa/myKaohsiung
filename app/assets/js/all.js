@@ -117,7 +117,7 @@ function pagination(data, nowPage) {
   // 最小值公式 -> 當前可顯示的最少資料量
   const minData = (currentPage * showPerPage) - showPerPage + 1;
 
-  // 最大值公式 -> 當前可顯示的最資料量
+  // 最大值公式 
   const maxData = (currentPage * showPerPage);
 
   let currentPageData = [];
@@ -139,8 +139,7 @@ function pagination(data, nowPage) {
     hasPage: currentPage > 1, //boolean
     hasNext: currentPage < dataTotal,
   };
-
-  updateData(currentPageData);
+  updateData(currentPageData);  //再重新渲染一次畫面
   // pageBtn(page, nowPage);
 }
 
