@@ -81,7 +81,7 @@ function updateData(showData) {
   cardList.innerHTML = str;
 }
 
-// 監聽select change event
+//監聽select change event
 select.addEventListener('change', switchDataSelect, false);
 
 function switchDataSelect(e) {
@@ -139,14 +139,75 @@ function pagination(data, nowPage) {
     hasPage: currentPage > 1, //boolean
     hasNext: currentPage < dataTotal,
   };
+  // console.log(page);
   updateData(currentPageData);  //再重新渲染一次畫面
-  // pageBtn(page, nowPage);
+  pageBtn(page, nowPage);
 }
 
 // 新增頁數功能 渲染在畫面中 ->放到renderData
 function pageBtn(page, current) {
+  //console.log(page);
+  let str = '';
+  const pageLen = page.pageTotal; //總共頁數
+  const now = parseInt(page.currentPage);
+  
+  if(current > 1){
+    str += `
+    <li class="page-item">
+      <a href="#" class="page-link active" data-type="page" data-page="${now - 1}">
+        <i class="fas fa-angle-left"></i> prev
+      </a>
+    </li>
+    `;
+  }else{
+    str += `
+      <li class="page-item">
+        <a href="#" class="page-link active" data-type="page" data-page="${now}">
+          <i class="fas fa-angle-left"></i> prev
+        </a>
+      </li>
+    `;
+  };
 
+  for(let i = 1; i <= pageLen; i++){
+    if(parseInt(page.currentPage) === i){
+      str += `
+      <li class="page-item">
+        <a href="#" class="page-link active" data-type="num" data-page="${i}">${i}</a>
+      </li>
+      `;
+    }else{
+      str += `
+      <li class="page-item">
+        <a href="#" class="page-link" data-type="num" data-page="${i}">${i}</a>
+      </li>
+      `;
+    };
+  };
+
+  if(current < pageLen){
+    str += `
+    <li class="page-item">
+      <a href="#" class="page-link active" data-type="page" data-page="${now + 1}">
+        next <i class="fas fa-angle-right"></i>
+      </a>
+    </li>
+    `;
+  }else{
+    str += `
+    <li class="page-item">
+      <a href="#" class="page-link" data-type="page" data-page="${now}">
+        next <i class="fas fa-angle-right"></i>
+      </a>
+    </li>
+    `;
+  };
+
+  pageList.innerHTML = str;
 }
+
+//user 點擊換頁功能 監聽 pageList click event
+  pageList.addEventListener('click', switchPage, false);
 
 // 這一段無效 只能用全區 data
 function switchPage(e){
