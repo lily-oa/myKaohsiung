@@ -86,7 +86,7 @@ function pagination(data, nowPage) {
   } // 最小值公式 -> 當前可顯示的最少資料量
 
 
-  var minData = currentPage * showPerPage - showPerPage + 1; // 最大值公式 -> 當前可顯示的最資料量
+  var minData = currentPage * showPerPage - showPerPage + 1; // 最大值公式 
 
   var maxData = currentPage * showPerPage;
   var currentPageData = []; //處理資料
@@ -110,7 +110,8 @@ function pagination(data, nowPage) {
     //boolean
     hasNext: currentPage < dataTotal
   };
-  updateData(currentPageData); // pageBtn(page, nowPage);
+  updateData(currentPageData); //再重新渲染一次畫面
+  // pageBtn(page, nowPage);
 } // 新增頁數功能 渲染在畫面中 ->放到renderData
 
 
