@@ -51,7 +51,7 @@ function updateData(showData) {
     str += content;
   });
   cardList.innerHTML = str;
-} // 監聽select change event
+} //監聽select change event
 
 
 select.addEventListener('change', switchDataSelect, false);
@@ -109,14 +109,53 @@ function pagination(data, nowPage) {
     hasPage: currentPage > 1,
     //boolean
     hasNext: currentPage < dataTotal
-  };
+  }; // console.log(page);
+
   updateData(currentPageData); //再重新渲染一次畫面
-  // pageBtn(page, nowPage);
+
+  pageBtn(page, nowPage);
 } // 新增頁數功能 渲染在畫面中 ->放到renderData
 
 
-function pageBtn(page, current) {} // 這一段無效 只能用全區 data
+function pageBtn(page, current) {
+  //console.log(page);
+  var str = '';
+  var pageLen = page.pageTotal; //總共頁數
 
+  var now = parseInt(page.currentPage);
+
+  if (current > 1) {
+    str += "\n    <li class=\"page-item\">\n      <a href=\"#\" class=\"page-link active\" data-type=\"page\" data-page=\"".concat(now - 1, "\">\n        <i class=\"fas fa-angle-left\"></i> prev\n      </a>\n    </li>\n    ");
+  } else {
+    str += "\n      <li class=\"page-item\">\n        <a href=\"#\" class=\"page-link active\" data-type=\"page\" data-page=\"".concat(now, "\">\n          <i class=\"fas fa-angle-left\"></i> prev\n        </a>\n      </li>\n    ");
+  }
+
+  ;
+
+  for (var i = 1; i <= pageLen; i++) {
+    if (parseInt(page.currentPage) === i) {
+      str += "\n      <li class=\"page-item\">\n        <a href=\"#\" class=\"page-link active\" data-type=\"num\" data-page=\"".concat(i, "\">").concat(i, "</a>\n      </li>\n      ");
+    } else {
+      str += "\n      <li class=\"page-item\">\n        <a href=\"#\" class=\"page-link\" data-type=\"num\" data-page=\"".concat(i, "\">").concat(i, "</a>\n      </li>\n      ");
+    }
+
+    ;
+  }
+
+  ;
+
+  if (current < pageLen) {
+    str += "\n    <li class=\"page-item\">\n      <a href=\"#\" class=\"page-link active\" data-type=\"page\" data-page=\"".concat(now + 1, "\">\n        next <i class=\"fas fa-angle-right\"></i>\n      </a>\n    </li>\n    ");
+  } else {
+    str += "\n    <li class=\"page-item\">\n      <a href=\"#\" class=\"page-link\" data-type=\"page\" data-page=\"".concat(now, "\">\n        next <i class=\"fas fa-angle-right\"></i>\n      </a>\n    </li>\n    ");
+  }
+
+  ;
+  pageList.innerHTML = str;
+} //user 點擊換頁功能 監聽 pageList click event
+
+
+pageList.addEventListener('click', switchPage, false); // 這一段無效 只能用全區 data
 
 function switchPage(e) {
   e.preventDefault();
