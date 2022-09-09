@@ -104,7 +104,7 @@ function switchDataSelect(e) {
 tabsList.addEventListener('click', switchDataTabs, false);
 
 function switchDataSelect(e){
-  e.preventDault();
+  e.preventDefault();
   if(e.target.nodeName !== 'A'){
     return;
   };
