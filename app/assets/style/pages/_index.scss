@@ -158,7 +158,7 @@
   padding-bottom: 0;
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
 
   @include media-breakpoint-up(md) {
     width: 45.3%;
@@ -272,7 +272,7 @@
 //若不是最後一個子節點都需設定邊距向右 8px
 .page-item {
   &:not(:last-child) {
-    margin-right: px;
+    margin-right: 2px;
   }
 }
 
