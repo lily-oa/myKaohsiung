@@ -14800,7 +14800,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 90%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -14952,7 +14952,7 @@ body {
 }
 
 .page-item:not(:last-child) {
-  margin-right: px;
+  margin-right: 2px;
 }
 
 .page-link {

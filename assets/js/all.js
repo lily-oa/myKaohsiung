@@ -100,7 +100,7 @@ function switchDataTabs(e) {
 
 function pagination(data, nowPage) {
   var dataTotal = data.length;
-  var showPerPage = 6; // 可能會有餘數 -> 無條件進位
+  var showPerPage = 10; // 可能會有餘數 -> 無條件進位
 
   var pageTotal = Math.ceil(dataTotal / showPerPage);
   var currentPage = nowPage; // 當 "當前頁數" 比 "總頁數" 大的時候，"當前頁數" 就等於 "總頁數"
