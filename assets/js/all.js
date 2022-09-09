@@ -71,25 +71,31 @@ function switchDataSelect(e) {
   }
 
   return false;
-} // // 監聽 tabs click事件
-// tabsList.addEventListener('click', switchDataTabs, false);
-// function switchDataSelect(e){
-//   e.preventDefault();
-//   if(e.target.nodeName !== 'A'){
-//     return;
-//   };
-//   let chosenTab = e.target.data.district;
-//   dataFilter(chosenTab);
-//   // 切換分頁
-//   if(e.target.dataset.type === 'page' || e.target.dataset.type === 'num'){
-//     const page = e.target.dataset.page;
-//     const title = subtitle.textContent;
-//     dataFilter(title);
-//     pagination(dataFilter(title), page);
-//   }
-//   return false;
-// }
-// 輸入showData 資料，用來計算 page 數量資料
+} // 監聽 tabs click事件
+
+
+tabsList.addEventListener('click', switchDataTabs, false);
+
+function switchDataTabs(e) {
+  e.preventDefault();
+
+  if (e.target.nodeName !== 'A') {
+    return;
+  }
+
+  ;
+  var chosenTab = e.target.data.district;
+  dataFilter(chosenTab); // 切換分頁
+
+  if (e.target.dataset.type === 'page' || e.target.dataset.type === 'num') {
+    var _page2 = e.target.dataset.page;
+    var title = subtitle.textContent;
+    dataFilter(title);
+    pagination(dataFilter(title), _page2);
+  }
+
+  return false;
+} // 輸入showData 資料，用來計算 page 數量資料
 
 
 function pagination(data, nowPage) {
