@@ -123,6 +123,8 @@ function switchDataTabs(e){
   return false;
 }
 
+
+
 // 輸入showData 資料，用來計算 page 數量資料
 function pagination(data, nowPage) {
   const dataTotal = data.length;
