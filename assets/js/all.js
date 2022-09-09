@@ -84,7 +84,7 @@ function switchDataTabs(e) {
   }
 
   ;
-  var chosenTab = e.target.data.district;
+  var chosenTab = e.target.dataset.district;
   dataFilter(chosenTab); // 切換分頁
 
   if (e.target.dataset.type === 'page' || e.target.dataset.type === 'num') {
