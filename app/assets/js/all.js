@@ -109,7 +109,7 @@ function switchDataTabs(e){
     return;
   };
 
-  let chosenTab = e.target.data.district;
+  let chosenTab = e.target.dataset.district;
 
   dataFilter(chosenTab);
 
