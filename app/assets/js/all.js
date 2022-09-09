@@ -100,6 +100,8 @@ function switchDataSelect(e) {
   }
   return false;
 }
+// 監聽 tabs click事件
+
 
 // 輸入showData 資料，用來計算 page 數量資料
 function pagination(data, nowPage) {
