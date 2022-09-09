@@ -261,10 +261,18 @@
 }
 
 //----------------------------分頁設定----------------
+.pagination-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 8px;
+}
+
 //若不是最後一個子節點都需設定邊距向右 8px
 .page-item {
   &:not(:last-child) {
-    margin-right: 8px;
+    margin-right: px;
   }
 }
 
