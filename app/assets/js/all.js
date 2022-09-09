@@ -100,28 +100,28 @@ function switchDataSelect(e) {
   }
   return false;
 }
-// // 監聽 tabs click事件
-// tabsList.addEventListener('click', switchDataTabs, false);
+// 監聽 tabs click事件
+tabsList.addEventListener('click', switchDataTabs, false);
 
-// function switchDataSelect(e){
-//   e.preventDefault();
-//   if(e.target.nodeName !== 'A'){
-//     return;
-//   };
+function switchDataTabs(e){
+  e.preventDefault();
+  if(e.target.nodeName !== 'A'){
+    return;
+  };
 
-//   let chosenTab = e.target.data.district;
+  let chosenTab = e.target.data.district;
 
-//   dataFilter(chosenTab);
+  dataFilter(chosenTab);
 
-//   // 切換分頁
-//   if(e.target.dataset.type === 'page' || e.target.dataset.type === 'num'){
-//     const page = e.target.dataset.page;
-//     const title = subtitle.textContent;
-//     dataFilter(title);
-//     pagination(dataFilter(title), page);
-//   }
-//   return false;
-// }
+  // 切換分頁
+  if(e.target.dataset.type === 'page' || e.target.dataset.type === 'num'){
+    const page = e.target.dataset.page;
+    const title = subtitle.textContent;
+    dataFilter(title);
+    pagination(dataFilter(title), page);
+  }
+  return false;
+}
 
 // 輸入showData 資料，用來計算 page 數量資料
 function pagination(data, nowPage) {
@@ -145,7 +145,7 @@ function pagination(data, nowPage) {
   let currentPageData = [];
   //處理資料
   data.forEach((item, index) => {
-    //獲取陣列索引，但因為索引是從 0 開始所以要 +1
+  //獲取陣列索引，但因為索引是從 0 開始所以要 +1
     const num = index + 1;
 
     if (num >= minData && num <= maxData) {
