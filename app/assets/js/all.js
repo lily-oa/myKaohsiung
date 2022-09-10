@@ -35,8 +35,9 @@ function renderData(showData) {
 
   let newSelect = selectGroup.filter((item, index) => {
     return selectGroup.indexOf(item) == index;
+    
   });
-
+  console.log(newSelect.value);
   let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
   newSelect.forEach(function (item) {
     let list = `<option value="${item}">${item}</option>`;
