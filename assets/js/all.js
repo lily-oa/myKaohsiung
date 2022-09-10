@@ -1,5 +1,10 @@
 "use strict";
 
+AOS.init({
+  once: true,
+  offset: 50
+});
+AOS.refresh();
 var url = 'https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json'; //高旅網  api
 
 var select = document.querySelector('.select-group'); //行政區
