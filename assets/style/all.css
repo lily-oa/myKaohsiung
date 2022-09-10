@@ -14733,6 +14733,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-top: 100px;
+  pointer-events: none;
 }
 
 .hr a {
