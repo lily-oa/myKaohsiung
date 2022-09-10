@@ -38,7 +38,6 @@ function renderData(showData) {
   var newSelect = selectGroup.filter(function (item, index) {
     return selectGroup.indexOf(item) == index;
   });
-  console.log(newSelect.value);
   var selectStr = "<option value=\"\u9AD8\u96C4\u5168\u5340\" selected\">-- \u9AD8\u96C4\u5168\u5340 --</option>";
   newSelect.forEach(function (item) {
     var list = "<option value=\"".concat(item, "\">").concat(item, "</option>");
@@ -130,9 +129,9 @@ function pagination(data, nowPage) {
     }
 
     ;
-  }); // 物件中的資料都是字串
+  }); // 用物件方式來傳遞資料
 
-  page = {
+  var page = {
     dataTotal: dataTotal,
     pageTotal: pageTotal,
     currentPage: currentPage,
@@ -206,7 +205,7 @@ function dataFilter(chosenDistrict) {
     if (chosenDistrict === item.Zone) {
       filterData.push(item);
     } else if (chosenDistrict === '高雄全區') {
-      filterData = data;
+      filterData = data; //將data陣列裡全部的資料放入filterData的陣列裡
     }
 
     return filterData;
