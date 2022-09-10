@@ -107,6 +107,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 100px; //虛線往下
+  pointer-events: none; // 穿透上層的div，點擊下方元素
 
   a {
     display: flex;
