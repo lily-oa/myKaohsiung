@@ -38,6 +38,7 @@ function renderData(showData) {
   var newSelect = selectGroup.filter(function (item, index) {
     return selectGroup.indexOf(item) == index;
   });
+  console.log(newSelect.value);
   var selectStr = "<option value=\"\u9AD8\u96C4\u5168\u5340\" selected\">-- \u9AD8\u96C4\u5168\u5340 --</option>";
   newSelect.forEach(function (item) {
     var list = "<option value=\"".concat(item, "\">").concat(item, "</option>");
