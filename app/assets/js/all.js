@@ -35,14 +35,15 @@ function renderData(showData) {
 
   let newSelect = selectGroup.filter((item, index) => {
     return selectGroup.indexOf(item) == index;
-    
+  
   });
-  console.log(newSelect.value);
+
   let selectStr = `<option value="高雄全區" selected">-- 高雄全區 --</option>`;
   newSelect.forEach(function (item) {
     let list = `<option value="${item}">${item}</option>`;
     selectStr += list;
   });
+
   select.innerHTML = selectStr;
   subtitle.textContent = '高雄全區';
 
@@ -162,8 +163,8 @@ function pagination(data, nowPage) {
     };
   });
 
-  // 物件中的資料都是字串
-  page = {
+  // 用物件方式來傳遞資料
+  const page = {
     dataTotal,
     pageTotal,
     currentPage,
@@ -254,15 +255,15 @@ function switchPage(e){
 // 用這行取代 switch Page 防止換頁監聽資訊遺漏
 function dataFilter(chosenDistrict){
   let filterData = [];
+  
   data.filter(function(item){
     if(chosenDistrict === item.Zone){
       filterData.push(item);
     } else if (chosenDistrict === '高雄全區'){
-      filterData = data;
+      filterData = data;  //將data陣列裡全部的資料放入filterData的陣列裡
     }
     return filterData;
   });
-  
   
   select.value = chosenDistrict;
   subtitle.textContent = chosenDistrict;
